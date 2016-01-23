@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<header class="page-header">
+		<div class="page-header__inner">
+			<a href="" class="logo"></a>
+			<nav class="main-nav">
+			<span id="menu_trigger" class="hamburger"></span>
+				<ul class="main-nav__list">
+					<li class="main-nav__item">
+						<a href="" class="main-nav__link"></a>
+					</li>
+				</ul>
+				<div class="page-header__contacts"><strong></strong></div>
+				<a href="" class="btn  btn--icon-calendar"></a>
+			</nav>
+		</div>
+	</header>
+
+	<section class="form-caption">
+		<h1 class="page-caption_title"></h1>
+		<p></p>
+	</section>
+
+	
+	<form action="">
+		<fieldset class="step step--gray">
+			<div class="step_wrapper">
+				<div class="step__number">шаг 1</div>
+				<div class="step__title">Дата отдыха</div>
+				<div class="step__data">
+					<label for="date-of-entry">Дата въезда</label>
+					<input type="date" name="date-of-entry" id="date-of-entry">
+				</div>
+				<div class="step__data">
+					<label for="date-of-departure">Дата выезда</label>
+					<input type="date" name="date-of-departure" id="date-of-departure">
+				</div>
+			</div>
+		</fieldset>
+	
+		<fieldset class="step">
+			<div class="step_wrapper">
+				<div class="step__number">шаг 2</div>
+				<div class="step__title">Место проживания</div>
+				<div class="step__data step__data--place-living">
+					<input type="radio" name="place-living" id="place-living-hotel"><label for="place-living-hotel"><span></span></label>
+				</div>
+				<div class="step__data step__data--place-living">
+					<input type="radio" name="place-living" id="place-living-cottage"><label for="place-living-cottage"><span></span></label>
+				</div>
+			</div>
+		</fieldset>
+	
+		<fieldset class="step step--gray">
+			<div class="step_wrapper">
+				<div class="step__number">шаг 3</div>
+				<div class="step__title">Тип коттеджа</div>
+				<div class="step__data step__data--type-cottage">
+					<input type="radio" name="type-cottage" id="type-cottage-flagman"><label for="type-cottage-flagman"><span></span></label>
+				</div>
+				<div class="description-cottage">
+					<div><img src="" alt=""><span></span></div>
+					<div><img src="" alt=""><span></span></div>
+					<div><img src="" alt=""><span></span></div>
+					<div><img src="" alt=""><span></span></div>
+					<div><img src="" alt=""><span></span></div>
+				</div>
+			</div>
+		</fieldset>
+	
+		<fieldset class="step">
+			<div class="step_wrapper">
+				<div class="step__number">шаг 4</div>
+				<div class="step__title">Персональная информация</div>
+				<div class="step__data">
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Фамилия">
+					<input type="text" placeholder="Номер телефона"><br/>Мы свяжимся с вами в случае необходимости
+					<input type="email" placeholder="E-mail"><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.
+				</div>
+			</div>
+		</fieldset>
+	
+		<fieldset class="step step--gray">
+			<div class="step_wrapper">
+				<div class="step__number">шаг 5</div>
+				<div class="step__title">Способ оплаты</div>
+				<div class="step__data step__data--payment-arive">
+					<input type="radio" name="payment"><span>по приезду</span>
+					<div></div>
+				</div>
+				<div class="step__data step__data--payment-now">
+					<input type="radio" name="payment"><span>Сейчас</span>
+					<div>
+						<label for="card-number"></label>
+						<br>
+						<input type="text" name="card-number" id="card-number">
+					</div>
+					<div>
+						<label for="card-cvv"></label>
+						<br>
+						<input type="text" name="card-cvv" id="card-cvv">
+						</div>
+					<div>
+						<label for="card-fio"></label>
+						<br>
+						<input type="text" name="card-fio" id="card-fio">
+					</div>
+					<div>
+						<label for="card-expired"></label>
+						<br>
+						<input type="text" name="card-expired" id="card-expired">
+					</div>
+				</div>
+				<div class="step__data">
+					<input type="radio">
+					<span class=""></span>
+				</div>
+				<input type="submit" value="Забронировать" class="btn btn--green">
+			</div>
+		</fieldset>
+
+	</form>
+
+
+	
+	<footer class="page-footer">
+		<div class="page-footer__address"></div>
+		<div class="page-footer__links"></div>
+		<div class="page-footer__contacts"></div>
+	</footer>
+
+	
+</body>
+</html>
