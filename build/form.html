@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- <meta name="viewport" content="width=1000"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+<script src="js/modernizr-custom.js"></script>
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+</script>
+
+<!-- <link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="icon" sizes="192x192" href="img/favicons/favicon-192x192.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-57x57.png">
+<meta name="theme-color" content="#2b2f38">
+<meta name="msapplication-TileColor" content="#2b2f38">
+<meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png"> -->
+
+</head>
+<body>
+  
+  <header class="page-header">
+    <div class="page-header__inner">
+      <a href="index.html" class="page-header__logo"><img src="img/logo.png"></a>
+      <nav class="main-nav">
+        <span id="menu_trigger" class="hamburger visible-md hidden-lg"></span>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="room-list.html" class="main-nav__link">Номера</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Коттедж</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Ресторан</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Отдых</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-header__contacts visible-lg"><strong>+7 812 777-55-88</strong><br/>г. Санкт-Петербург, Приморское ш.600</div>
+       <div class="page-header__btn visible-lg"><a href="form.html" class="btn btn--icon-calendar">Забронировать</a></div>
+    </div>
+  </header>
+
+  <section class="booking-form-caption">
+  <h1 class="booking-form-caption__title">Бронирование</h1>
+  <p>Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните
+по телефону: <strong>+7 812 777-55-88</strong></p>
+  </section>
+
+  
+  <form action="">
+  <section class="booking-form-step booking-form-step--gray">
+    <div class="booking-form-step__wrapper">
+      <div class="booking-form-step__number">шаг 1</div>
+      <div class="booking-form-step__title">Дата отдыха</div>
+      <div class="booking-form-dates">
+        <label for="date-of-entry">Дата въезда<br>
+          <input type="text" name="date-of-entry-day" placeholder="ДД" size="2" >
+          <input type="text" name="date-of-entry-month" placeholder="ММ" size="2" >
+          <input type="text" name="date-of-entry-year" placeholder="ГГГГ" size="4" >  
+        </label>
+        <label for="date-of-departure">Дата выезда<br>
+        <input type="text" name="date-of-departure-date" placeholder="ДД" size="2" >
+        <input type="text" name="date-of-departure-month" placeholder="ММ" size="2" >
+        <input type="text" name="date-of-departure-year" placeholder="ГГГГ" size="4" ></label>
+      </div>
+    </div>
+  </section>
+  
+  <section class="booking-form-step">
+    <div class="booking-form-step__wrapper">
+      <div class="booking-form-step__number">шаг 2</div>
+      <div class="booking-form-step__title">Место проживания</div>
+      <div class="booking-form-place-living">
+        <label for="place-living-hotel"><input type="radio" name="place-living" id="place-living-hotel">Отель</label><span></span>
+        <label for="place-living-cottage"><input type="radio" name="place-living" id="place-living-cottage">Коттедж</label><span></span>
+      </div>
+    </div>
+  </section>
+  
+  <section class="booking-form-step booking-form-step--gray">
+    <div class="booking-form-step__wrapper">
+      <div class="booking-form-step__number">шаг 3</div>
+      <div class="booking-form-step__title">Тип коттеджа</div>
+      <div class="booking-form-type-cottage">
+        <label for="type-cottage-flagman">Флагман<input type="radio" name="type-cottage" id="type-cottage-flagman"></label><span></span>
+        <label for="type-cottage-flagman">Озерный<input type="radio" name="type-cottage" id="type-cottage-flagman"></label>
+        <label for="type-cottage-flagman">Ольховка<input type="radio" name="type-cottage" id="type-cottage-flagman"></label>
+        <label for="type-cottage-flagman">Портовый<input type="radio" name="type-cottage" id="type-cottage-flagman"></label>
+      </div>
+      <div class="description-cottage">
+        <div><img src="" alt=""><span>Площать 100 м<sub>2</sub></span></div>
+        <div><img src="" alt=""><span>3 комнаты</span></div>
+        <div><img src="" alt=""><span>5 спальных мест</span></div>
+        <div><img src="" alt=""><span>Раздельный санузел</span></div>
+        <div><img src="" alt=""><span>Wi-Fi</span></div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="booking-form-step">
+    <div class="booking-form-step__wrapper">
+      <div class="booking-form-step__number">шаг 4</div>
+      <div class="booking-form-step__title">Персональная информация</div>
+      <div class="booking-form-personal">
+        <div><input type="text" placeholder="Имя"></div>
+        <div><input type="text" placeholder="Фамилия"></div>
+        <div><input type="text" placeholder="Номер телефона"><br/>Мы свяжимся с вами в случае необходимости</div>
+        <div><input type="email" placeholder="E-mail"><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="booking-form-step booking-form-step--gray">
+    <div class="booking-form-step_wrapper">
+      <div class="booking-form-step__number">шаг 5</div>
+      <div class="booking-form-step__title">Способ оплаты</div>
+      <div>
+      <div class="booking-form-payment-arive">
+        <label>по приезду<input type="radio" name="payment"></label>
+        <div>Вы можете произвести оплату по факту заселения.</div>
+      </div>
+      <div class="booking-form-payment-now">
+        <input type="radio" name="payment"><span>Сейчас</span>
+        Прямо сейчас вы можете произвести оплату с помощью банковской карты.
+        <label for="card-number">номер карты<br><input type="text" name="card-number" id="card-number"></label>
+        <label for="card-cvv">Код CVV<br><input type="text" name="card-cvv" id="card-cvv"></label>
+        <label for="card-fio">Фамилия владельца карты<br><input type="text" name="card-fio" id="card-fio"></label>
+         <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired"></label>
+      </div>
+      </div>
+      <div class="booking-form-step__data">
+        <span class="">К оплате</span>
+      </div>
+      <input type="submit" value="Забронировать" class="btn btn--block">
+    </div>
+  </section>
+
+  </form>
+
+
+  
+ <footer class="page-footer">
+	<div class="page-footer__inner">
+		<div class="page-footer__address">г. Санкт-Петербург<br> Приморское ш.600</div>
+		<div class="page-footer__links"><img src="img/logo.png" alt=""></div>
+		<div class="page-footer__contacts">+7 812 777-55-88<br>info@greenvalley.ru</div>
+	</div>
+</footer>
+
+  
+</body>
+</html>

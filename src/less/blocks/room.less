@@ -1,0 +1,144 @@
+.room-header {
+  padding-top: 50px;
+  text-align: center;
+  &__title {
+    font-size: 30px;
+  }
+  &__price { 
+    & span {
+      color: @orange;
+    }
+  }
+}
+
+
+.room {
+  .container-fixed();
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+  overflow: hidden;
+  position: relative;
+
+  padding-top: 50px;
+
+  &__inner {
+    .make-row();
+  }
+
+  &__gallery {
+    @media (min-width: @screen-sm-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-md-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 50%;
+      position: absolute;
+      right: 0;
+    }
+
+  }
+  
+  .btn, &__price {
+    text-align: center;
+  }
+
+  ul {
+    column-count: 2;
+    list-style-type: decimal;
+    height: 100px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  li::before {
+    content: ">";
+    color: @orange;
+    padding-right: 15px;
+  }
+
+}
+  
+
+.room-description {
+  @media (min-width: @screen-sm-min) {
+    width: 100%;
+  }
+  @media (min-width: @screen-md-min) {
+   width: 100%;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 26px;
+    padding-top: 10px;
+  }
+
+  &__text {
+    margin: 14px 0;
+  }
+}
+
+.room-booking {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.other-rooms {
+  background-color: #f6f6f6;
+
+  &__inner {
+    .container-fixed();
+    @media (min-width: @screen-sm-min) {
+      width: @container-sm;
+    }
+    @media (min-width: @screen-md-min) {
+      width: @container-md;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: @container-lg;
+    }
+    overflow: hidden;
+    padding: 10px 0;
+  }
+
+  &__list {
+    .make-row();
+  }
+
+  &__item {
+    .make-lg-column(4);
+    img {
+      height: 200px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 26px;
+    padding: 10px;
+  }
+
+  &__price {
+    font-style: 14px;
+    text-align: center;
+  }
+
+  &__price span{
+    color: @orange;
+  }
+
+}
+

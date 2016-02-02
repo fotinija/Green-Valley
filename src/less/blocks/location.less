@@ -1,0 +1,40 @@
+.location {
+  .container-fixed();
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+  overflow: hidden;
+  padding: 20px 0;
+
+  &__inner {
+    .make-row();
+  }
+
+  &__title {
+    color: @text-color;
+    font-size: 26px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  &__bus {
+    .make-lg-column-offset(1);
+    .make-lg-column(5);
+    .make-md-column(6);
+  }
+
+  &__train {
+    .make-lg-column-offset(1);
+    .make-lg-column(5);
+    .make-md-column(6);
+  }
+
+
+}

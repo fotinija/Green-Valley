@@ -1,0 +1,67 @@
+.accommodation {
+  //.make-row();
+  background-image: url('../img/accomondation-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    .container-fixed();
+
+    @media (min-width: @screen-sm-min) {
+      width: @container-sm;
+    }
+    @media (min-width: @screen-md-min) {
+      width: @container-md;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: @container-lg;
+    }
+    overflow: hidden;
+    padding: 20px 0;
+
+    & img {
+      height: 200px;
+    }
+  }
+
+  &__hotel {
+    .make-lg-column-offset(2);
+    .make-lg-column(4);
+    .make-md-column(6);
+    background-color: #fff;
+    padding: 0;
+    margin: 0 15px;
+  }
+
+  &__cottage {
+    .make-lg-column(4);
+    //.make-lg-column-offset(1);
+    .make-md-column(6);
+    background-color: #fff;
+    padding: 0;
+    margin: 0 15px;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  &__title-item {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 0 10px;
+  }
+
+  &__price-item {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 0 20px;
+    
+    & strong {
+      color: @orange;
+    }
+  }
+}

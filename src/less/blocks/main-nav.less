@@ -1,0 +1,42 @@
+.main-nav {
+  .make-lg-column(5);
+  .make-md-column(5);
+
+  margin: 0;
+  //padding: 0;
+
+  padding-top: 10px 0 0;
+
+	&__list {
+    padding: 0;
+	}
+
+	&__item {
+		display: inline;
+    padding-right: 10px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+	}
+
+	&__link {
+		color: @text-color;
+		text-decoration: none;
+		text-transform: uppercase;
+    position: relative;
+	  &:hover,  &:active, &:focus{
+      color: @orange;
+      text-decoration: none;
+      &::after {
+        background-color: #ff7435;
+        bottom: -5px;
+        content: "";
+        height: 2px;
+        left: 25%;
+        position: absolute;
+        width: 50%;
+      }
+    }
+  }
+}

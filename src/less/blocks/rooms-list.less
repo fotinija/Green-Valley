@@ -1,0 +1,102 @@
+.rooms-list{
+   .container-fixed();
+   @media (min-width: @screen-sm-min) {
+     width: @container-sm;
+   }
+   @media (min-width: @screen-md-min) {
+     width: @container-md;
+   }
+   @media (min-width: @screen-lg-min) {
+     width: @container-lg;
+   }
+   overflow: hidden;
+  
+
+  &__title {
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+    background-color: @gray--lightest;
+    .make-row();
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  &__item-img{
+    @media (min-width: @screen-sm-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-md-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+    }
+    
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__item-description {
+    @media (min-width: @screen-sm-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-md-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-lg-min) {
+     width: 50%;
+    }
+    padding: 25px 110px;
+
+  }
+
+  &__buttons {
+    @media (min-width: @screen-sm-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-md-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-lg-min) {
+     width: 50%;
+    }
+    float: none;
+    padding: 10px 110px 40px;
+  }
+}
+
+.rooms-item-header {
+  @media (min-width: @screen-sm-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-md-min) {
+     width: 100%;
+    }
+    @media (min-width: @screen-lg-min) {
+     width: 50%;
+    }
+  padding-top: 40px;
+  text-align: center;
+
+  &__title {
+    
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__price {
+    text-transform: uppercase;
+  }
+
+  &__price span{
+    color: @orange;
+  }
+}

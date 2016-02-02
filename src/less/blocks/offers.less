@@ -1,0 +1,47 @@
+.offers{
+
+  .container-fixed();
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+  overflow: hidden;
+  padding: 20px 0;
+
+  &__title {
+    color: @text-color;
+    font-size: 26px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  &__slides {
+    .make-row();
+  }
+  
+  &__slide {
+    .make-lg-column(12);
+    background-size: cover;
+    height: 330px;
+  }
+  
+  &__slide-inner {
+    background-color: @gray--lightest;
+    width: 300px;
+    margin-top: 200px;
+    padding: 15px;
+  }
+
+  &__slide-title{
+    padding-bottom: 10px;
+    color: @orange;
+    text-transform: uppercase;
+  }
+
+
+}
