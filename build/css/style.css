@@ -93,34 +93,46 @@ hr {
 	cursor: pointer;
 }
 
-.embed-responsive {
-	position: relative;
-	display: block;
-	height: 0;
-	padding: 0;
-	overflow: hidden;
+@-ms-viewport {
+	width: device-width;
 }
 
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	height: 100%;
-	width: 100%;
-	border: 0;
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+	display: none !important;
 }
 
-.embed-responsive-16by9 {
-	padding-bottom: 56.25%;
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+	display: none !important;
 }
 
-.embed-responsive-4by3 {
-	padding-bottom: 75%;
+.visible-print {
+	display: none !important;
+}
+
+.visible-print-block {
+	display: none !important;
+}
+
+.visible-print-inline {
+	display: none !important;
+}
+
+.visible-print-inline-block {
+	display: none !important;
 }
 
 .row {
@@ -288,20 +300,26 @@ img {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	font-size: 14px;
 	width: 100%;
+	font-size: 14px;
 	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
+	text-align: center;
+}
+
+.hamburger {
+	position: absolute;
+	right: 0;
 }
 
 .main-nav {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0;
@@ -375,11 +393,11 @@ img {
 
 .page-footer__address {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: left;
@@ -387,11 +405,11 @@ img {
 
 .page-footer__links {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: center;
@@ -399,11 +417,11 @@ img {
 
 .page-footer__contacts {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: right;
@@ -515,33 +533,33 @@ img {
 
 .relax__title {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
 .relax__wrapper-text {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
 .relax__features {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -715,22 +733,22 @@ img {
 
 .location__bus {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
 .location__train {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -756,11 +774,11 @@ img {
 
 .accommodation__hotel {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #fff;
@@ -770,11 +788,11 @@ img {
 
 .accommodation__cottage {
 	position: relative;
+	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
 	font-size: 14px;
-	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #fff;
@@ -1171,14 +1189,71 @@ img {
   }
 }*/
 
+@media (min-width: 480px) and (max-width: 767px) {
+
+.visible-sm {
+	display: block !important;
+}
+
+table.visible-sm {
+	display: table !important;
+}
+
+tr.visible-sm {
+	display: table-row !important;
+}
+
+th.visible-sm,
+td.visible-sm {
+	display: table-cell !important;
+}
+
+.visible-sm-block {
+	display: block !important;
+}
+
+.visible-sm-inline {
+	display: inline !important;
+}
+
+.visible-sm-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-sm {
+	display: none !important;
+}
+
+}
+
 @media (min-width: 480px) {
 
 .page-header {
 	width: 750px;
 }
 
+.main-nav {
+	width: 41.66666667%;
+}
+
 .page-footer {
 	width: 750px;
+}
+
+.page-footer__address {
+	width: 33.33333333%;
+}
+
+.page-footer__links {
+	width: 33.33333333%;
+}
+
+.page-footer__contacts {
+	margin-left: 16.66666667%;
+}
+
+.page-footer__contacts {
+	width: 16.66666667%;
 }
 
 .promo__slide-inner {
@@ -1189,8 +1264,24 @@ img {
 	width: 750px;
 }
 
+.relax__title {
+	width: 100%;
+}
+
+.relax__wrapper-text {
+	width: 100%;
+}
+
+.relax__features {
+	width: 100%;
+}
+
 .review__inner {
 	width: 750px;
+}
+
+.review__slide {
+	width: 100%;
 }
 
 .offers {
@@ -1201,8 +1292,24 @@ img {
 	width: 750px;
 }
 
+.location__bus {
+	width: 50%;
+}
+
+.location__train {
+	width: 50%;
+}
+
 .accommodation__inner {
 	width: 750px;
+}
+
+.accommodation__hotel {
+	width: 50%;
+}
+
+.accommodation__cottage {
+	width: 50%;
 }
 
 .rooms-list {
@@ -1247,6 +1354,43 @@ img {
 
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+
+.visible-md {
+	display: block !important;
+}
+
+table.visible-md {
+	display: table !important;
+}
+
+tr.visible-md {
+	display: table-row !important;
+}
+
+th.visible-md,
+td.visible-md {
+	display: table-cell !important;
+}
+
+.visible-md-block {
+	display: block !important;
+}
+
+.visible-md-inline {
+	display: inline !important;
+}
+
+.visible-md-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-md {
+	display: none !important;
+}
+
+}
+
 @media (min-width: 768px) {
 
 .page-header {
@@ -1262,27 +1406,11 @@ img {
 }
 
 .page-header__logo {
-	width: 16.66666667%;
-}
-
-.main-nav {
-	width: 41.66666667%;
+	width: 100%;
 }
 
 .page-footer {
 	width: 970px;
-}
-
-.page-footer__address {
-	width: 33.33333333%;
-}
-
-.page-footer__links {
-	width: 33.33333333%;
-}
-
-.page-footer__contacts {
-	width: 33.33333333%;
 }
 
 .promo__slide-inner {
@@ -1291,22 +1419,6 @@ img {
 
 .relax {
 	width: 970px;
-}
-
-.relax__title {
-	width: 100%;
-}
-
-.relax__wrapper-text {
-	width: 50%;
-}
-
-.relax__wrapper-text {
-	margin-left: 50%;
-}
-
-.relax__features {
-	width: 100%;
 }
 
 .review__inner {
@@ -1321,24 +1433,8 @@ img {
 	width: 970px;
 }
 
-.location__bus {
-	width: 50%;
-}
-
-.location__train {
-	width: 50%;
-}
-
 .accommodation__inner {
 	width: 970px;
-}
-
-.accommodation__hotel {
-	width: 50%;
-}
-
-.accommodation__cottage {
-	width: 50%;
 }
 
 .rooms-list {
@@ -1388,6 +1484,39 @@ img {
 }
 
 @media (min-width: 992px) {
+
+.visible-lg {
+	display: block !important;
+}
+
+table.visible-lg {
+	display: table !important;
+}
+
+tr.visible-lg {
+	display: table-row !important;
+}
+
+th.visible-lg,
+td.visible-lg {
+	display: table-cell !important;
+}
+
+.visible-lg-block {
+	display: block !important;
+}
+
+.visible-lg-inline {
+	display: inline !important;
+}
+
+.visible-lg-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-lg {
+	display: none !important;
+}
 
 .page-header {
 	width: 1170px;
@@ -1439,10 +1568,6 @@ img {
 
 .relax__title {
 	width: 100%;
-}
-
-.relax__wrapper-text {
-	margin-left: 25%;
 }
 
 .relax__wrapper-text {
@@ -1572,6 +1697,80 @@ img {
 
 .booking-form-dates {
 	width: 100%;
+}
+
+}
+
+@media (max-width: 479px) {
+
+.visible-xs {
+	display: block !important;
+}
+
+table.visible-xs {
+	display: table !important;
+}
+
+tr.visible-xs {
+	display: table-row !important;
+}
+
+th.visible-xs,
+td.visible-xs {
+	display: table-cell !important;
+}
+
+.visible-xs-block {
+	display: block !important;
+}
+
+.visible-xs-inline {
+	display: inline !important;
+}
+
+.visible-xs-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-xs {
+	display: none !important;
+}
+
+}
+
+@media print {
+
+.visible-print {
+	display: block !important;
+}
+
+table.visible-print {
+	display: table !important;
+}
+
+tr.visible-print {
+	display: table-row !important;
+}
+
+th.visible-print,
+td.visible-print {
+	display: table-cell !important;
+}
+
+.visible-print-block {
+	display: block !important;
+}
+
+.visible-print-inline {
+	display: inline !important;
+}
+
+.visible-print-inline-block {
+	display: inline-block !important;
+}
+
+.hidden-print {
+	display: none !important;
 }
 
 }
