@@ -1,19 +1,15 @@
 .page-header {
 	font-family: @font-family;
+  border-bottom: 1px solid @gray--light;
 
-  .container-fixed();
+  &__container {
+    .make-container();
+  }
 
-  @media (min-width: @screen-sm-min) {
-    width: @container-sm;
-  }
-  @media (min-width: @screen-md-min) {
-    width: @container-md;
-  }
-  @media (min-width: @screen-lg-min) {
-    width: @container-lg;
-  }
   overflow: hidden;
 	//text-align:center;
+
+  padding: 20px 0;
 
 	&__inner {
 		//margin: 0 auto;

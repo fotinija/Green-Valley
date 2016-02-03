@@ -31,40 +31,44 @@
 <body>
   
   <header class="page-header">
-    <div class="page-header__inner">
-      <a href="index.html" class="page-header__logo"><img src="img/logo.png"></a>
-      <nav class="main-nav">
-        <span id="menu_trigger" class="hamburger hidden-lg">Меню</span>
-        <ul class="main-nav__list visible-lg">
-          <li class="main-nav__item">
-            <a href="room-list.html" class="main-nav__link">Номера</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Коттедж</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Ресторан</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Отдых</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="" class="main-nav__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="page-header__contacts hidden-xs hidden-sm"><strong>+7 812 777-55-88</strong><br/>г. Санкт-Петербург, Приморское ш.600</div>
-       <div class="page-header__btn  hidden-xs hidden-sm"><a href="form.html" class="btn btn--icon-calendar">Забронировать</a></div>
+    <div class="page-header__container">
+      <div class="page-header__inner">
+        <a href="index.html" class="page-header__logo"><img src="img/logo.png"></a>
+        <nav class="main-nav">
+          <span id="menu_trigger" class="hamburger hidden-lg">Меню</span>
+          <ul class="main-nav__list visible-lg">
+            <li class="main-nav__item">
+              <a href="room-list.html" class="main-nav__link">Номера</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Коттедж</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Ресторан</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Отдых</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__contacts hidden-xs hidden-sm"><strong>+7 812 777-55-88</strong><br/>г. Санкт-Петербург, Приморское ш.600</div>
+         <div class="page-header__btn  hidden-xs hidden-sm"><a href="form.html" class="btn btn--icon-calendar">Забронировать</a></div>
+      </div>
     </div>
   </header>
   
   <section class="promo">
     <div class="promo__wrapper-slides">
       <div class="promo__slide  promo__slide--active" style="background-image: url('img/promo-bg-1.png');">
-        <div class="promo__slide-inner">
-          <h1 class="promo__slide-title">Семейный отдых на  берегу Финского залива</h1>
-          <p class="promo__slide-description">Green Valley - это современная база отдыха
-в курортном районе для здорового отдыха всей семёй.</p>
+        <div class="promo__slide-container">
+          <div class="promo__slide-inner">
+            <h1 class="promo__slide-title">Семейный отдых на  берегу Финского залива</h1>
+            <p class="promo__slide-description">Green Valley - это современная база отдыха
+          в курортном районе для здорового отдыха всей семёй.</p>
+          </div>
         </div>
       </div>
       <div class="promo__slide" style="background-image: url();">
@@ -81,95 +85,134 @@
   </section>
   
   <section class="relax">
-    <h1 class="relax__title">Здоровый отдых</h1>
-    <div class="relax__wrapper-text">
-      <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. <br/>Почувствуйте отдых!</p>
+    <div class="relax__container">
+      <div class="relax__inner">
+        <h1 class="relax__title">Здоровый отдых</h1>
+        <div class="relax__wrapper-text">
+          <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. <br/>Почувствуйте отдых!</p>
+        </div>
+        <ul class="relax__features hidden-xs">
+          <li style="background-image: url('img/relax-swimming-pool.png');">бассейн</li>
+          <li style="background-image: url('img/relax-sport.png');">спортивная площадка</li>
+          <li style="background-image: url('img/relax-billiards.png');">бильярд</li>
+          <li style="background-image: url('img/relax-spa.png');">спа</li>
+          <li style="background-image: url('img/relax-bath.png');">бани</li>
+          <li style="background-image: url('img/relax-animation.png');">анимация</li>
+        </ul>
+      </div>
     </div>
-    <ul class="relax__features">
-      <li style="background-image: url('img/relax-swimming-pool.png');">бассейн</li>
-      <li style="background-image: url('img/relax-sport.png');">спортивная площадка</li>
-      <li style="background-image: url('img/relax-billiards.png');">бильярд</li>
-      <li style="background-image: url('img/relax-spa.png');">спа</li>
-      <li style="background-image: url('img/relax-bath.png');">бани</li>
-      <li style="background-image: url('img/relax-animation.png');">анимация</li>
-    </ul>
   </section>
   
   <div class="gallery"></div>
 
   <section class="review">
-    <div class="review__inner">
-      <h1 class="review__title">Отзывы</h1>
-      <div class="review__carousel">
-        <blockquote class="review__slide">
-          Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!
-          <footer class="review__slide-footer">
-            <div class="review__date">Дата отдыха:<br/>01.06.2015 - 08.06.2015</div>
-            <div class="review__author">
-              <img src="img/review-img-1.png" class="img-thumbnail" height="604" width="403" alt="">
-              Екатерина В.
-              <div class="review__social-links"><a href=""></a></div>
-            </div>
-          </footer>
-        </blockquote>
+    <div class="review__container">
+      <div class="review__inner">
+        <h1 class="review__title">Отзывы</h1>
+        <div class="review__carousel">
 
-        <blockquote class="review__slide">
-          Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.
-          <footer class="review__slide-footer">
-            <div class="review__date">Дата отдыха:<br/>15.05.2015 - 20.05.2015</div>
-            <div class="review__author">
-              <img src="img/review-img-2.png"  class="img-thumbnail" height="604" width="604" alt="">
-              Екатерина В.
-              <div class="review__social-links"><a href=""></a></div>
+          <div class="review__arrow-left hidden-xs"></div>
+
+          <div class="review__slide">
+            <div class="review__slide-inner">
+              Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!
+              <footer class="review__slide-footer">
+                <div class="review__date">Дата отдыха:<br/>01.06.2015 - 08.06.2015</div>
+                <div class="review__author">
+                  <div class="review__author-img">
+                    <img src="img/review-img-1.png" height="604" width="403" alt="">
+                  </div>
+                  Екатерина В.
+                  <div class="review__social-links"><a href=""></a></div>
+                </div>
+              </footer>
             </div>
-          </footer>
-        </blockquote>
+          </div>
+
+      
+          <div class="review__slide hidden-xs">
+            <div class="review__slide-inner">
+              Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведённые у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё: тёплый приём персоналом.
+              <footer class="review__slide-footer">
+                <div class="review__date">Дата отдыха:<br/>15.05.2015 - 20.05.2015</div>
+                <div class="review__author">
+                  <div class="review__author-img">
+                    <img src="img/review-img-2.png" height="604" width="604" alt="">
+                  </div>
+                  Екатерина В.
+                  <div class="review__social-links"><a href=""></a></div>
+                </div>
+              </footer>
+            </div>
+          </div>
+
+          <div class="review__arrow-right  hidden-xs"></div>
+
+        </div>
+        <div class="review__button">
+          <a href="" class="btn btn--bordered">Все отзывы</a>
+        </div>
       </div>
-      <a href="" class="btn btn--bordered">Все отзывы</a>
     </div>
   </section>
   
   <section class="offers">
-    <div class="offers__title">Акции и предложения</div>
-    <div class="offers__slides">
-      <div class="offers__slide" style="background-image: url('img/offers-bg-1.png');">
-        <div class="offers__slide-inner">
-          <div class="offers__slide-title">Скидки в мае</div>
-          <div class="offers__slide-description">Забронируйте номер или коттедж любой категории до 31 июня и получите
-  скидку 10% !</div>
+    <div class="offers__container">
+      <div class="offers__inner">
+        <div class="offers__title">Акции и предложения</div>
+        <div class="offers__slides">
+          <div class="offers__slide" style="background-image: url('img/offers-bg-1.png');">
+            <div class="offers__slide-inner">
+              <div class="offers__slide-title">Скидки в мае</div>
+              <div class="offers__slide-description">Забронируйте номер или коттедж любой категории до 31 июня и получите
+          скидку 10% !</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   
   <section class="location">
-    <div class="location__title">Как добраться</div>
-    <div id="card"></div>
-    <div class="location__bus">
-      <div class="location__title">Автобусы</div>
-      <strong>№ 211</strong> от станции метро «Черная речка» до остановки «Санаторий Репино»<br>
-      <strong>№ 305К</strong> от станции метро «Старая деревня»<br>
-      <strong>№ 680К</strong> от станции метро «Проспект Просвещения»<br>
-      <strong>№ 400К</strong> от станции метро «Площадь Ленина»</div>
-    <div class="location__train">
-      <div class="location__title"> Электропоезд</div>
-      Электропоезд Выборгского направления
-от Финляндского вокзала Санкт-Петербурга
-до платформы «Репино»</div>
+    <div class="location__container">
+      <div class="location__inner">
+        <div class="location__title">Как добраться</div>
+        <div id="card"></div>
+        <div class="location__bus">
+          <div class="location__title">Автобусы</div>
+          <strong>№ 211</strong> от станции метро «Черная речка» до остановки «Санаторий Репино»<br>
+          <strong>№ 305К</strong> от станции метро «Старая деревня»<br>
+          <strong>№ 680К</strong> от станции метро «Проспект Просвещения»<br>
+          <strong>№ 400К</strong> от станции метро «Площадь Ленина»
+        </div>
+        <div class="location__train">
+          <div class="location__title"> Электропоезд</div>
+          Электропоезд Выборгского направления
+        от Финляндского вокзала Санкт-Петербурга
+        до платформы «Репино»
+        </div>
+      </div>
+    </div>
   </section>
   
   <section class="accommodation">
-    <div class="accommodation__inner">
-      <div class="accommodation__title">Где вы хотите отдохнуть?</div>
-      <div class="accommodation__hotel">
-        <img src="img/standart.png" height="398" width="600" alt="">
-        <div class="accommodation__title-item">В отеле</div>
-        <div class="accommodation__price-item">от <strong>4000</strong> руб./сутки</div>
-      </div>
-      <div class="accommodation__cottage">
-        <img src="img/cottage.png" height="769" width="1023" alt="">
-        <div class="accommodation__title-item">В коттедже</div>
-        <div class="accommodation__price-item">от <strong>6800</strong> руб./сутки</div>
+    <div class="accommodation__container">
+      <div class="accommodation__inner">
+        <div class="accommodation__title">Где вы хотите отдохнуть?</div>
+        <div class="accommodation__hotel">
+          <div class="accommodation__hotel-inner">
+            <img src="img/hotel.png" height="199" width="379" alt="">
+            <div class="accommodation__title-item">В отеле</div>
+            <div class="accommodation__price-item">от <strong>4000</strong> руб./сутки</div>
+          </div>
+        </div>
+        <div class="accommodation__cottage">
+          <div class="accommodation__cottage-inner">
+            <img src="img/cottage.png" height="199" width="378" alt="">
+            <div class="accommodation__title-item">В коттедже</div>
+            <div class="accommodation__price-item">от <strong>6800</strong> руб./сутки</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -1,42 +1,39 @@
 .relax{
-  .container-fixed();
-
-  @media (min-width: @screen-sm-min) {
-    width: @container-sm;
-  }
-  @media (min-width: @screen-md-min) {
-    width: @container-md;
-  }
-  @media (min-width: @screen-lg-min) {
-    width: @container-lg;
-  }
-  overflow: hidden;
 
   background-image: url('../img/relax-bg.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  text-align: center;
 
-  &__wrapper-slides {
-    .make-row();
+  &__container {
+    .make-container();
   }
 
-  text-align: center;
+  &__inner {
+    .make-row();
+  }
 
   &__title {
     .make-lg-column(12);
     .make-sm-column(12);
+    font-size: 26px;
   }
 
   &__wrapper-text {
-    .make-lg-column(6);
     .make-lg-column-offset(3);
-    .make-sm-column(12);
+    .make-lg-column(6); 
+    .make-sm-column-offset(1);
+    .make-sm-column(10);   
+    .make-xs-column(12);
   }
   
   &__features {
-    .make-lg-column(12);
-    .make-sm-column(12);
+    .make-lg-column-offset(2);
+    .make-lg-column(8);
+    .make-sm-column-offset(1);
+    .make-sm-column(10); 
+    .make-xs-column(12);
     & li {
       display: inline-block;
       vertical-align: top;

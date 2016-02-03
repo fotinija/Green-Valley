@@ -1,58 +1,73 @@
-.review{
+.review {
   background-image: url('../img/review-bg.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-bottom: 50px;
 
-
-
-  &__inner {
-    .container-fixed();
-    @media (min-width: @screen-sm-min) {
-      width: @container-sm;
-    }
-    @media (min-width: @screen-md-min) {
-      width: @container-md;
-    }
-    @media (min-width: @screen-lg-min) {
-      width: @container-lg;
-    }
-    overflow: hidden;
+  &__container {
+    .make-container();
   }
 
-  text-align: center;
+  &__inner {
+    .make-row();
+  }
 
   &__title {
-
+    .make-lg-column(12);
+    color: #fff;
     text-align: center;
+    font-size: 26px;
   }
 
   &__carousel {
-    .make-row();
-    display: flex;
-    flex-direction: row;
+    
+  }
+
+  &__arrow-left {
+    .make-lg-column(1);
+  }
+
+  &__arrow-right {
+    .make-lg-column(1);
+    vertical-align: middle;
   }
   
-  &__slide{
+  &__slide {
     .make-lg-column(5);
     .make-sm-column(12);
-    padding-top: 80px;
+    margin-top: 60px;
+  }
+
+  &__slide-inner {
+    padding: 80px 15px 20px;
     background-color: #fff;
   }
 
-  &__slide-footer{
+  &__button {
+    .make-lg-column(12);
+    text-align: center;
+  }
+
+  &__slide-footer {
 
   }
 
   &__author {
+    position: absolute;
+    top: -20px;
+    left: 40%;
+  }
+
+   &__author-img {
     width: 80px;
     height: 80px;
     margin: 0 auto;
     margin-top: -25px;
     margin-bottom: 7px;
-    position: absolute;
-    top: -20px;
-    left: 40%;
+    overflow: hidden;
+    border: 2px solid #fff;
+
   }
 
 

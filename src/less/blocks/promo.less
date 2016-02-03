@@ -1,7 +1,6 @@
 .promo{
   
-
-  &__slide{
+  &__slide {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,47 +8,42 @@
     display: none;
   }
 
-  &__slide--active{
+  &__slide--active {
     display: block;
   }
 
-  &__slide-inner{
-    .container-fixed();
+  &__slide-container {
+    .make-container();
+  }
 
-    @media (min-width: @screen-sm-min) {
-      width: @container-sm;
-    }
-    @media (min-width: @screen-md-min) {
-      width: @container-md;
-    }
-    @media (min-width: @screen-lg-min) {
-      width: @container-lg;
-    }
-    overflow: hidden;
-
-    // &__wrapper-slides{
-    //   //.make-row();
-    // }
+  &__slide-inner {
+    .make-row();
+  }
 
     // &__slide-inner{
     //   .make-lg-column(12);
     //   .make-md-column(12);
     // }
-  }
+
 
   &__slide-title {
+    .make-lg-column-offset(3);
+    .make-lg-column(6);    
+    .make-xs-column(12);
     background-color: #fff;
     width: 415px;
     padding: 10px;
-    font-style: 36px;
+    font-size: 36px;
     margin-top: 70px;
   }
 
   &__slide-description {
+    .make-lg-column(12);
+    .make-xs-column(12);
     background-color: #fff;
     width: 415px;
     padding: 10px;
-    font-style: 18px;
+    font-size: 18px;
   }
 
   &__tabs {
