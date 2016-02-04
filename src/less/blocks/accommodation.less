@@ -3,6 +3,7 @@
   background-image: url('../img/accomondation-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 50px 0;
 
    &__container {
     .make-container();
@@ -10,16 +11,11 @@
 
   &__inner {
     .make-row();
-    padding: 20px 0;
-
-    & img {
-      height: 200px;
-    }
   }
 
   &__hotel {
-    .make-lg-column-offset(1);
-    .make-lg-column(5);
+    .make-lg-column-offset(2);
+    .make-lg-column(4);
     .make-sm-column(6);
     .make-xs-column(12);
     padding-top: 20px;
@@ -29,7 +25,7 @@
   }
 
   &__cottage {
-    .make-lg-column(5);
+    .make-lg-column(4);
     .make-sm-column(6);
     .make-xs-column(12);
     padding-top: 20px;
@@ -44,22 +40,30 @@
     color: #fff;
     font-size: 26px;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+  }
+
+  &__img {
+    height: 200px;
+    overflow: hidden;
   }
 
   &__title-item {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    padding: 20px 0 10px;
+    padding: 20px 0 5px;
   }
 
   &__price-item {
     text-transform: uppercase;
     text-align: center;
-    padding: 5px 0 20px;
+    padding: 0 0 50px;
+    font-size: 10px;
     
     & strong {
       color: @orange;
+      font-size: 14px;
+      font-weight: normal;
     }
   }
 }

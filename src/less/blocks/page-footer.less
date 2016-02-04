@@ -1,19 +1,13 @@
 .page-footer {
+  
+  &__container {
+    .make-container();
+  }
+
+
   font-family: @font-family;
-
-  .container-fixed();
-
-  @media (min-width: @screen-sm-min) {
-    width: @container-sm;
-  }
-  @media (min-width: @screen-md-min) {
-    width: @container-md;
-  }
-  @media (min-width: @screen-lg-min) {
-    width: @container-lg;
-  }
   overflow: hidden;
-  padding: 50px 0;
+  padding: 26px 0 20px;
 
   &__inner {
     .make-row();

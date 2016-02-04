@@ -245,7 +245,7 @@ img {
 	font-family: "fira_sansmedium", Helvetica, Arial;
 	border-bottom: 1px solid #ebebeb;
 	overflow: hidden;
-	padding: 20px 0;
+	height: 90px;
 }
 
 .page-header__container {
@@ -281,7 +281,6 @@ img {
 	min-height: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-top: 5px;
 }
 
 .page-header__contacts strong {
@@ -312,6 +311,7 @@ img {
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: center;
+	padding-top: 17px;
 }
 
 .hamburger {
@@ -334,6 +334,7 @@ img {
 
 .main-nav__list {
 	padding: 0;
+	margin: 0;
 }
 
 .main-nav__item {
@@ -347,6 +348,7 @@ img {
 
 .main-nav__link {
 	color: #191919;
+	line-height: 90px;
 	text-decoration: none;
 	text-transform: uppercase;
 	position: relative;
@@ -373,12 +375,16 @@ img {
 
 .page-footer {
 	font-family: "fira_sansmedium", Helvetica, Arial;
+	overflow: hidden;
+	padding: 26px 0 20px;
+}
+
+.page-footer__container {
 	margin-right: auto;
 	margin-left: auto;
 	padding-left: 15px;
 	padding-right: 15px;
 	overflow: hidden;
-	padding: 50px 0;
 }
 
 .page-footer__inner {
@@ -661,6 +667,7 @@ img {
 	color: #fff;
 	text-align: center;
 	font-size: 26px;
+	margin: 50px 0 0;
 }
 
 .review__arrow-left {
@@ -713,6 +720,7 @@ img {
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: center;
+	padding-top: 50px;
 }
 
 .review__author {
@@ -732,7 +740,7 @@ img {
 }
 
 .offers {
-	padding: 20px 0;
+	padding: 50px 0 0;
 }
 
 .offers__container {
@@ -771,7 +779,7 @@ img {
 	color: #191919;
 	font-size: 26px;
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 40px;
 }
 
 .offers__slides {
@@ -876,6 +884,7 @@ img {
 	background-image: url('../img/accomondation-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	padding: 50px 0;
 }
 
 .accommodation__container {
@@ -890,7 +899,6 @@ img {
 	margin-left: -15px;
 	margin-right: -15px;
 	font-size: 0;
-	padding: 20px 0;
 }
 
 .flexbox .accommodation__inner {
@@ -901,10 +909,6 @@ img {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-}
-
-.accommodation__inner img {
-	height: 200px;
 }
 
 .accommodation__hotel {
@@ -951,23 +955,31 @@ img {
 	color: #fff;
 	font-size: 26px;
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
+}
+
+.accommodation__img {
+	height: 200px;
+	overflow: hidden;
 }
 
 .accommodation__title-item {
-	font-size: 18px;
+	font-size: 20px;
 	text-align: center;
-	padding: 20px 0 10px;
+	padding: 20px 0 5px;
 }
 
 .accommodation__price-item {
 	text-transform: uppercase;
 	text-align: center;
-	padding: 5px 0 20px;
+	padding: 0 0 50px;
+	font-size: 10px;
 }
 
 .accommodation__price-item strong {
 	color: #ff7435;
+	font-size: 14px;
+	font-weight: normal;
 }
 
 .rooms-header {
@@ -981,6 +993,7 @@ img {
 	text-align: center;
 	color: #fff;
 	padding-top: 45px;
+	margin: 0;
 }
 
 .rooms-header p {
@@ -1053,12 +1066,12 @@ img {
 }
 
 .room-header {
-	padding-top: 50px;
 	text-align: center;
 }
 
 .room-header__title {
 	font-size: 30px;
+	margin: 0;
 }
 
 .room-header__price span {
@@ -1289,7 +1302,7 @@ img {
 	text-decoration: none;
 	font-size: 12px;
 	font-weight: bold;
-	line-height: 30px;
+	line-height: 37px;
 	text-transform: uppercase;
 }
 
@@ -1383,7 +1396,7 @@ td.visible-sm {
 	width: 41.66666667%;
 }
 
-.page-footer {
+.page-footer__container {
 	width: 750px;
 }
 
@@ -1568,7 +1581,7 @@ td.visible-md {
 	width: 100%;
 }
 
-.page-footer {
+.page-footer__container {
 	width: 970px;
 }
 
@@ -1697,7 +1710,7 @@ td.visible-lg {
 	width: 41.66666667%;
 }
 
-.page-footer {
+.page-footer__container {
 	width: 1170px;
 }
 
@@ -1814,15 +1827,15 @@ td.visible-lg {
 }
 
 .accommodation__hotel {
-	margin-left: 8.33333333%;
+	margin-left: 16.66666667%;
 }
 
 .accommodation__hotel {
-	width: 41.66666667%;
+	width: 33.33333333%;
 }
 
 .accommodation__cottage {
-	width: 41.66666667%;
+	width: 33.33333333%;
 }
 
 .accommodation__title {
