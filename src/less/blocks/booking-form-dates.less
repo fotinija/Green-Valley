@@ -1,17 +1,41 @@
 .booking-form-dates {
-  .make-lg-column(12);
-  background-color: #fff;
-  width: 200px;
-  margin: auto;
+  .make-row();
+  &__inner {
+    .make-lg-column-offset(4);
+    .make-lg-column(4);
+    .make-xs-column(12);
+    @media (max-width: @screen-xs-max) {
+      margin: 20px 0;
+    } 
+    @media (min-width: @screen-sm-min) {
+      background-color: #fff;   
+    } 
+       
+  }
+  
 
   & input[type="text"]{
-   padding: 5px;
-   margin: 10px 0;
+    padding: 5px;
+    margin: 10px 0;
+    color: @green;
   }
 
   & label {
-    float: left;
-    width: 50%;
-    padding: 50px;
+    display: inline-block;
+    @media (max-width: @screen-xs-max) {
+      width: 100%;  
+    } 
+    @media (min-width: @screen-sm-min) {
+      width: 49%; 
+      padding: 50px 0; 
+      margin: 20px 0;
+    } 
+    
+    
+    border-right: 1px solid @gray--light;
+    text-align: center;
+    &:last-child {
+      border-right: none;
+    }
   }
 }

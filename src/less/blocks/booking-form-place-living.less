@@ -1,5 +1,54 @@
 .booking-form-place-living {
+  
+  .make-row();
+  &__inner {
+    .make-lg-column-offset(4);
+    .make-lg-column(4);
+    border: 1px solid @gray--light;
+  }
+  & label {
+    display: inline-block;
+    position: relative;
+    margin: 25px 0;
+    text-align: center;
+    cursor: pointer;
+    height: 158px;
+    width: 49%;
+    & span:before {
+      content: '';
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 85px;
+      height: 65px;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translate(-50%);
+      opacity: 0.5;
+    }
+  }
+
+  &__hotel {
+    border-right: 1px solid @gray--light;
+    & span:before{
+      background-image: url('../img/form-hotel.png');
+    }
+  }
+
+  &__cottage span:before {
+    background-image: url('../img/form-cottage.png');
+  }
+
   & input[type="radio"] {
     display: none;
+    &:checked + span:before {
+      opacity: 1;
+    }
   }
+
+  & img {
+    width: 90px;
+    opacity: 0.5;
+  }
+
 }

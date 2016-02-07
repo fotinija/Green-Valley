@@ -34,8 +34,8 @@
     <div class="page-header__container">
       <div class="page-header__inner">
         <a href="index.html" class="page-header__logo"><img src="img/logo.png"></a>
+        <span id="menu_trigger" class="hamburger hidden-lg"></span>
         <nav class="main-nav">
-          <span id="menu_trigger" class="hamburger hidden-lg">Меню</span>
           <ul class="main-nav__list visible-lg">
             <li class="main-nav__item">
               <a href="room-list.html" class="main-nav__link">Номера</a>
@@ -54,43 +54,45 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header__contacts hidden-xs hidden-sm"><strong>+7 812 777-55-88</strong><br/>г. Санкт-Петербург, Приморское ш.600</div>
-         <div class="page-header__btn  hidden-xs hidden-sm"><a href="form.html" class="btn btn--icon-calendar">Забронировать</a></div>
+        <div class="page-header__contacts hidden-xs hidden-sm hidden-md"><strong>+7 812 777-55-88</strong><br/>г. Санкт-Петербург, Приморское ш.600</div>
+         <div class="page-header__btn hidden-xs hidden-sm hidden-md"><a href="form.html" class="btn btn--icon-calendar">Забронировать</a></div>
       </div>
     </div>
   </header>
   
   <section class="room-header">
     <div class="room-header__title">Эконом</div>
-    <div class="room-header__price">от <span>3400</span> руб./сутки</div>
+    <div class="room-price">от <span>3400</span> руб./сутки</div>
   </section>
 
   <section class="room">
-    <div class="room__inner">
-      <div class="room__gallery"><img src="img/singe-room.png" height="733" width="1100" alt=""></div>
-      <div class="room-description">
-        <div class="room-description__title">О номере</div>
-        <div class="room-description__text">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив.</div>
-        <div class="room-description__title">Удобства</div>
-        <div class="room-description__text">
-          <ul>
-            <li>WI-FI</li>
-            <li>Двуспальная кровать</li>
-            <li>Кресло</li>
-            <li>Раскладывающийся диван</li>
-            <li>Фен</li>
-            <li>Рабочий стол</li>
-            <li>Шкаф для одежды</li>
-            <li>Багажная тумба</li>
-            <li>Сейф</li>
-          </ul>
-        </div>
-        <div class="room-description__title">В стоимость входит</div>
-        <div class="room-description__text">
-          <ul>
-            <li>Бассейн с с 8.30 до 10.00</li>
-            <li>Завтрак и обед «шведский стол»</li>
-          </ul>
+    <div class="room__container">
+      <div class="room__inner">
+        <div class="room__gallery"><img src="img/singe-room.png" height="733" width="1100" alt=""></div>
+        <div class="room__description">
+          <div class="room__description-title">О номере</div>
+          <div class="room__description-text">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на&nbsp;проживание 1-2 человек. Часть номеров с видом на Финский залив.</div>
+          <div class="room__description-title">Удобства</div>
+          <div class="room__description-text">
+            <ul>
+              <li>WI-FI</li>
+              <li>Двуспальная кровать</li>
+              <li>Кресло</li>
+              <li>Раскладывающийся диван</li>
+              <li>Фен</li>
+              <li>Рабочий стол</li>
+              <li>Шкаф для одежды</li>
+              <li>Багажная тумба</li>
+              <li>Сейф</li>
+            </ul>
+          </div>
+          <div class="room__description-title">В стоимость входит</div>
+          <div class="room__description-text">
+            <ul>
+              <li>Бассейн с с 8.30 до 10.00</li>
+              <li>Завтрак и обед «шведский стол»</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -98,7 +100,7 @@
 
   <section class="room-booking">
     <a href="" class="btn">Забронировать</a>
-    <div class="room-booking__price">от <span>3400</span> руб./сутки</div>
+    <div class="room-price">от <span>3400</span> руб./сутки</div>
   </section>
 
   
@@ -106,19 +108,31 @@
     <div class="other-rooms__inner">
       <div class="other-rooms__list">
         <div class="other-rooms__item">
-          <img src="img/standart.png" height="398" width="600" alt="">
-          <div class="other-rooms__title">Стандарт</div>
-          <div class="other-rooms__price">от <span>4000</span> руб./сутки</div>
+          <div class="other-rooms__item-inner">
+            <div class="other-room__item-img">
+              <img src="img/standart.png" height="398" width="600" alt="">
+            </div>
+            <div class="other-rooms__title">Стандарт</div>
+            <div class="room-price">от <span>4000</span> руб./сутки</div>
+          </div>
         </div>
         <div class="other-rooms__item">
-          <img src="img/standart-plus.png" height="613" width="1072" alt="">
-          <div class="other-rooms__title">Стандарт +</div>
-          <div class="other-rooms__price">от <span>4500</span> руб./сутки</div>
+          <div class="other-rooms__item-inner">
+            <div class="other-room__item-img">
+              <img src="img/standart-plus.png" height="613" width="1072" alt="">
+            </div>
+            <div class="other-rooms__title">Стандарт +</div>
+            <div class="room-price">от <span>4500</span> руб./сутки</div>
+          </div>
         </div>
         <div class="other-rooms__item">
-          <img src="img/lux.png" height="374" width="708" alt="">
-          <div class="other-rooms__title">Люкс</div>
-          <div class="other-rooms__price">от <span>5700</span> руб./сутки</div>
+          <div class="other-rooms__item-inner">
+            <div class="other-room__item-img">
+              <img src="img/lux.png" height="374" width="708" alt="">
+            </div>
+            <div class="other-rooms__title">Люкс</div>
+            <div class="room-price">от <span>5700</span> руб./сутки</div>
+          </div>
         </div>
       </div>
     </div>

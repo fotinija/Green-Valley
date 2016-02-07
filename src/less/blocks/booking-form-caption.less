@@ -1,11 +1,29 @@
 .booking-form-caption {
+  .make-container();
+  &__container {
+    .make-row();
+  }
+  &__inner {
+    .make-lg-column-offset(4);
+    .make-lg-column(4);
+    .make-md-column-offset(3);
+    .make-md-column(6);
+  }
   &__title {
-    font-style: 30px;
+    padding-top: 75px;
+    padding-bottom: 20px;
+    font-size: 30px;
     text-align: center;
+    font-weight: normal;
   }
 
   & p {
     text-align: center;
+    padding-bottom: 50px;
+    font-size: 16px;
+    & strong {
+      color: @orange;
+      font-weight: normal;
+    }
   }
-
 }

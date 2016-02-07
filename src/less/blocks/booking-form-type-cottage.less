@@ -1,0 +1,38 @@
+.booking-form-type-cottage {
+  .make-row();
+  &__inner {
+    .make-lg-column-offset(2);
+    .make-lg-column(8);
+    background-color: #fff;
+  }
+  & label {
+    display: inline-block;
+    margin: 25px 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 40px 0;
+    width: 24%;
+    margin: 25px 0;
+    border-right: 1px solid @gray--light;
+    position: relative;
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  & input[type="radio"] {
+    display: none;
+    &:checked + span:after {
+      content: '';
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('../img/check.png');
+      width: 16px;
+      height: 12px;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.description-cottage {
+  .make-row();
+  margin-top: 20px;
+  &__inner {
+    .make-lg-column(8);
+    .make-lg-column-offset(2);
+    padding: 0;
+    background-color: #fff;
+
+    & div {
+      display: inline-block;
+      margin: 25px 0;
+      text-align: center;
+      cursor: pointer;
+      padding: 40px 0;
+      width: 19%;
+      margin: 25px 0;
+      border-right: 1px solid @gray--light;
+      position: relative;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

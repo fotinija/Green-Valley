@@ -34,8 +34,8 @@
     <div class="page-header__container">
       <div class="page-header__inner">
         <a href="index.html" class="page-header__logo"><img src="img/logo.png"></a>
+        <span id="menu_trigger" class="hamburger hidden-lg"></span>
         <nav class="main-nav">
-          <span id="menu_trigger" class="hamburger hidden-lg">Меню</span>
           <ul class="main-nav__list visible-lg">
             <li class="main-nav__item">
               <a href="room-list.html" class="main-nav__link">Номера</a>
@@ -54,16 +54,20 @@
             </li>
           </ul>
         </nav>
-        <div class="page-header__contacts hidden-xs hidden-sm"><strong>+7 812 777-55-88</strong><br/>г. Санкт-Петербург, Приморское ш.600</div>
-         <div class="page-header__btn  hidden-xs hidden-sm"><a href="form.html" class="btn btn--icon-calendar">Забронировать</a></div>
+        <div class="page-header__contacts hidden-xs hidden-sm hidden-md"><strong>+7 812 777-55-88</strong><br/>г. Санкт-Петербург, Приморское ш.600</div>
+         <div class="page-header__btn hidden-xs hidden-sm hidden-md"><a href="form.html" class="btn btn--icon-calendar">Забронировать</a></div>
       </div>
     </div>
   </header>
 
   <section class="booking-form-caption">
-  <h1 class="booking-form-caption__title">Бронирование</h1>
-  <p>Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните
-по телефону: <strong>+7 812 777-55-88</strong></p>
+    <div class="booking-form-caption__container">
+      <div class="booking-form-caption__inner">
+        <h1 class="booking-form-caption__title">Бронирование</h1>
+        <p>Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните
+         по телефону: <strong>+7 812 777-55-88</strong></p>
+      </div>
+    </div>
   </section>
 
   
@@ -73,15 +77,17 @@
       <div class="booking-form-step__number">шаг 1</div>
       <div class="booking-form-step__title">Дата отдыха</div>
       <div class="booking-form-dates">
-        <label for="date-of-entry">Дата въезда<br>
-          <input type="text" name="date-of-entry-day" placeholder="ДД" size="2" >
-          <input type="text" name="date-of-entry-month" placeholder="ММ" size="2" >
-          <input type="text" name="date-of-entry-year" placeholder="ГГГГ" size="4" >  
-        </label>
-        <label for="date-of-departure">Дата выезда<br>
-        <input type="text" name="date-of-departure-date" placeholder="ДД" size="2" >
-        <input type="text" name="date-of-departure-month" placeholder="ММ" size="2" >
-        <input type="text" name="date-of-departure-year" placeholder="ГГГГ" size="4" ></label>
+        <div class="booking-form-dates__inner">
+          <label for="date-of-entry">Дата въезда<br>
+            <input type="text" name="date-of-entry-day" placeholder="ДД" size="2" >
+            <input type="text" name="date-of-entry-month" placeholder="ММ" size="2" >
+            <input type="text" name="date-of-entry-year" placeholder="ГГГГ" size="4" >  
+          </label>
+          <label for="date-of-departure">Дата выезда<br>
+          <input type="text" name="date-of-departure-date" placeholder="ДД" size="2" >
+          <input type="text" name="date-of-departure-month" placeholder="ММ" size="2" >
+          <input type="text" name="date-of-departure-year" placeholder="ГГГГ" size="4" ></label>
+        </div>
       </div>
     </div>
   </section>
@@ -91,8 +97,10 @@
       <div class="booking-form-step__number">шаг 2</div>
       <div class="booking-form-step__title">Место проживания</div>
       <div class="booking-form-place-living">
-        <label for="place-living-hotel"><input type="radio" name="place-living" id="place-living-hotel">Отель</label><span></span>
-        <label for="place-living-cottage"><input type="radio" name="place-living" id="place-living-cottage">Коттедж</label><span></span>
+        <div class="booking-form-place-living__inner">
+          <label for="place-living-hotel" class="booking-form-place-living__hotel"><input type="radio" name="place-living" id="place-living-hotel"><span>Отель</span></label>
+          <label for="place-living-cottage" class="booking-form-place-living__cottage"><input type="radio" name="place-living" id="place-living-cottage"><span>Коттедж</span></label>
+        </div>
       </div>
     </div>
   </section>
@@ -102,17 +110,21 @@
       <div class="booking-form-step__number">шаг 3</div>
       <div class="booking-form-step__title">Тип коттеджа</div>
       <div class="booking-form-type-cottage">
-        <label for="type-cottage-flagman">Флагман<input type="radio" name="type-cottage" id="type-cottage-flagman"></label><span></span>
-        <label for="type-cottage-flagman">Озерный<input type="radio" name="type-cottage" id="type-cottage-flagman"></label>
-        <label for="type-cottage-flagman">Ольховка<input type="radio" name="type-cottage" id="type-cottage-flagman"></label>
-        <label for="type-cottage-flagman">Портовый<input type="radio" name="type-cottage" id="type-cottage-flagman"></label>
+        <div class="booking-form-type-cottage__inner">
+          <label for="type-cottage-flagman"><input type="radio" name="type-cottage" id="type-cottage-flagman"><span>Флагман</span></label>
+          <label for="type-cottage-ozernyj"><input type="radio" name="type-cottage" id="type-cottage-ozernyj"><span>Озерный</span></label>
+          <label for="type-cottage-olhovka"><input type="radio" name="type-cottage" id="type-cottage-olhovka"><span>Ольховка</span></label>
+          <label for="type-cottage-portovyj"><input type="radio" name="type-cottage" id="type-cottage-portovyj"><span>Портовый</span></label>
+        </div>
       </div>
       <div class="description-cottage">
-        <div><img src="" alt=""><span>Площать 100 м<sub>2</sub></span></div>
-        <div><img src="" alt=""><span>3 комнаты</span></div>
-        <div><img src="" alt=""><span>5 спальных мест</span></div>
-        <div><img src="" alt=""><span>Раздельный санузел</span></div>
-        <div><img src="" alt=""><span>Wi-Fi</span></div>
+        <div class="description-cottage__inner">
+          <div><img src="" alt=""><span>Площать 100 м<sup>2</sup></span></div>
+          <div><img src="" alt=""><span>3 комнаты</span></div>
+          <div><img src="" alt=""><span>5 спальных мест</span></div>
+          <div><img src="" alt=""><span>Раздельный санузел</span></div>
+          <div><img src="" alt=""><span>Wi-Fi</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -122,36 +134,43 @@
       <div class="booking-form-step__number">шаг 4</div>
       <div class="booking-form-step__title">Персональная информация</div>
       <div class="booking-form-personal">
-        <div><input type="text" placeholder="Имя"></div>
-        <div><input type="text" placeholder="Фамилия"></div>
-        <div><input type="text" placeholder="Номер телефона"><br/>Мы свяжимся с вами в случае необходимости</div>
-        <div><input type="email" placeholder="E-mail"><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+        <div class="booking-form-personal__inner">
+          <div><input type="text" placeholder="Имя"></div>
+          <div><input type="text" placeholder="Фамилия"></div>
+          <div><input type="text" placeholder="Номер телефона"><br/>Мы свяжимся с вами в случае необходимости</div>
+          <div><input type="email" placeholder="E-mail"><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+        </div>
       </div>
     </div>
   </section>
   
   <section class="booking-form-step booking-form-step--gray">
-    <div class="booking-form-step_wrapper">
+    <div class="booking-form-step__wrapper">
       <div class="booking-form-step__number">шаг 5</div>
       <div class="booking-form-step__title">Способ оплаты</div>
-      <div>
-      <div class="booking-form-payment-arive">
-        <label>по приезду<input type="radio" name="payment"></label>
-        <div>Вы можете произвести оплату по факту заселения.</div>
+      <div class="booking-form-payment">
+        <div class="booking-form-payment__inner">
+          <div class="booking-form-payment__methods">
+            <div class="booking-form-payment__arive">
+              <label>по приезду<input type="radio" name="payment"></label>
+              <div>Вы можете произвести оплату по факту заселения.</div>
+            </div>
+            <div class="booking-form-payment__now">
+              <input type="radio" name="payment"><span>Сейчас</span>
+              Прямо сейчас вы можете произвести оплату с помощью банковской карты.
+              <label for="card-number">номер карты<br><input type="text" name="card-number" id="card-number"></label>
+              <label for="card-cvv">Код CVV<br><input type="text" name="card-cvv" id="card-cvv"></label>
+              <label for="card-fio">Фамилия владельца карты<br><input type="text" name="card-fio" id="card-fio"></label>
+               <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired"></label>
+            </div>
+          </div>
+          <div class="booking-form-payment__total">
+            <span class="">К оплате</span>
+          </div>
+          <input type="submit" value="Забронировать" class="btn btn--green btn--wide">
+        </div>
       </div>
-      <div class="booking-form-payment-now">
-        <input type="radio" name="payment"><span>Сейчас</span>
-        Прямо сейчас вы можете произвести оплату с помощью банковской карты.
-        <label for="card-number">номер карты<br><input type="text" name="card-number" id="card-number"></label>
-        <label for="card-cvv">Код CVV<br><input type="text" name="card-cvv" id="card-cvv"></label>
-        <label for="card-fio">Фамилия владельца карты<br><input type="text" name="card-fio" id="card-fio"></label>
-         <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired"></label>
-      </div>
-      </div>
-      <div class="booking-form-step__data">
-        <span class="">К оплате</span>
-      </div>
-      <input type="submit" value="Забронировать" class="btn btn--block">
+     
     </div>
   </section>
 

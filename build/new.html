@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var links = document.querySelectorAll("a");
+
+		for (var i=0; i<links.length; i++){
+		  links[i].addEventListener('dbclick', addEvent());
+		}
+
+		function addEvent(event){
+		  event.preventDefault();
+		  alert("Привет");
+		}
+	</script>
+
+<a href="">Lorem.</a>
+<a href="">Cumque.</a>
+<a href="">Adipisci?</a>
+<a href="">Nesciunt?</a>
+<a href="">Repellendus.</a>
+<a href="">Ex?</a>
+<a href="">Veniam.</a>
+<a href="">Eius.</a>
+<a href="">Ex?</a>
+<a href="">Eum.</a>
+
+</body>
+</html>
+
+
+// Аккордеон (clear)
+
+var elems = document.querySelectorAll(".outer");
+
+function accordion() {
+  for (var i=0; i<elems.length; i++) {
+      if (elems[i]==this) {
+      elems[i].classList.toggle("active");
+      }
+    else {
+      elems[i].classList.remove("active");
+    }
+  }
+}
+
+for (var i=0; i<elems.length; i++) {
+  elems[i].addEventListener('click',accordion);
+}
+
+
+<div class="outer active">Любопытство – вот, что заставляет нас двигаться
+  <div class="inner">Три положения, три управляющие кнопки. зеленый индикатор перемещается</div>
+</div>
+
+<div class="outer">Любопытство – вот, что заставляет нас двигаться
+  <div class="inner">Три положения, три управляющие кнопки. зеленый индикатор перемещается</div>
+</div>
+
+<div class="outer">Любопытство – вот, что заставляет нас двигаться
+  <div class="inner">Три положения, три управляющие кнопки. зеленый индикатор перемещается</div>
+</div>
+
+<div class="outer">Любопытство – вот, что заставляет нас двигаться
+  <div class="inner">Три положения, три управляющие кнопки. зеленый индикатор перемещается</div>
+</div>  
+
+.outer {
+  width: 400px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+.outer:before {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+  content: "+";
+}
+.inner {
+  padding: 10px 0 10px 24px;
+  color: #999;
+  display: none;
+  opacity: 0;
+  transition: 1s;
+
+}
+.active > .inner {
+  display: block;
+  opacity: 1;
+  transition: 1s;
+}
+.active:before {
+  content: "-";
+}
+
+
+
+// Вкладки (clear)
+
+var tabs = document.querySelectorAll(".tabs a");
+var contents = document.querySelectorAll(".tab-content .content");
+
+function changeTab(){
+  for (var i=0; i<tabs.length; i++){
+    tabs[i].parentNode.classList.remove('tab-active'); 
+  }
+  this.parentNode.classList.add('tab-active');
+  
+  for (i=0; i<contents.length; i++){
+    contents[i].classList.remove('content-active'); 
+  }
+  
+  var link = this.getAttribute("href");
+  document.querySelector(link).classList.add('content-active');
+}
+
+for (var i=0; i<tabs.length; i++){
+  tabs[i].addEventListener('click', changeTab);
+}
+
+<ul class="tabs">
+  <li class="tab-active"><a href="#tab1">First</a></li>
+  <li><a href="#tab2">Second</a></li>
+  <li><a href="#tab3">Third</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="tab1" class="content content-active">Первый табчик. Любопытство - вот, что заставляет нас двигаться.</div>
+  <div id="tab2" class="content">Ты открыл второй табчик! Мы же говорили: любопытство - вот, что заставляет нас двигаться.</div>
+  <div id="tab3" class="content">Ты открыл третий табчик! Мы же говорили: любопытство - вот, что заставляет нас двигаться.</div>
+</div>
+
+.tabs {
+  list-style: none;
+  margin: 15px 0;
+  padding: 0;
+}
+.tabs li {
+  width: 80px;
+  display: inline-block;
+}
+.tabs > li > a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #999;
+  color: #000;
+}
+.tabs > li.tab-active > a {
+  background-color: #FF4F0B;
+  border: 1px solid #FF4F0B;
+}
+.tab-content > div.content {
+  display: none;
+}
+.tab-content > div.content-active {
+  display: block;
+}

@@ -3,40 +3,24 @@
   &__title {
     font-size: 30px;
     margin: 0;
-  }
-  &__price { 
-    & span {
-      color: @orange;
-    }
+    line-height: 30px;
+    padding-top: 50px;
+    padding-bottom: 10px;
   }
 }
 
 
 .room {
-  .container-fixed();
-  @media (min-width: @screen-sm-min) {
-    width: @container-sm;
+  &__container {
+    .make-container();
+    position: relative;
   }
-  @media (min-width: @screen-md-min) {
-    width: @container-md;
-  }
-  @media (min-width: @screen-lg-min) {
-    width: @container-lg;
-  }
-  overflow: hidden;
-  position: relative;
-
   padding-top: 50px;
-
   &__inner {
     .make-row();
   }
-
   &__gallery {
-    @media (min-width: @screen-sm-min) {
-     width: 100%;
-    }
-    @media (min-width: @screen-md-min) {
+    @media (max-width: @screen-md-max) {
      width: 100%;
     }
     @media (min-width: @screen-lg-min) {
@@ -44,7 +28,6 @@
       position: absolute;
       right: 0;
     }
-
   }
   
   .btn, &__price {
@@ -52,9 +35,12 @@
   }
 
   ul {
-    column-count: 2;
+    @media (min-width: @screen-lg-min) { 
+      column-count: 2;
+      height: 100px;
+    }
     list-style-type: decimal;
-    height: 100px;
+    
   }
 
   li {
@@ -66,27 +52,25 @@
     color: @orange;
     padding-right: 15px;
   }
+ 
 
-}
-  
-
-.room-description {
-  @media (min-width: @screen-sm-min) {
-    width: 100%;
-  }
-  @media (min-width: @screen-md-min) {
-   width: 100%;
-  }
-  @media (min-width: @screen-lg-min) {
-    width: 50%;
+  &__description {
+    @media (max-width: @screen-md-max) {
+      width: 100%;
+      padding: 0 30px;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 50%;
+    }
+    font-size: 16px;
   }
 
-  &__title {
+  &__description-title {
     font-size: 26px;
     padding-top: 10px;
   }
 
-  &__text {
+  &__description-text {
     margin: 14px 0;
   }
 }
@@ -96,49 +80,5 @@
   padding-bottom: 50px;
 }
 
-.other-rooms {
-  background-color: #f6f6f6;
 
-  &__inner {
-    .container-fixed();
-    @media (min-width: @screen-sm-min) {
-      width: @container-sm;
-    }
-    @media (min-width: @screen-md-min) {
-      width: @container-md;
-    }
-    @media (min-width: @screen-lg-min) {
-      width: @container-lg;
-    }
-    overflow: hidden;
-    padding: 10px 0;
-  }
-
-  &__list {
-    .make-row();
-  }
-
-  &__item {
-    .make-lg-column(4);
-    img {
-      height: 200px;
-    }
-  }
-
-  &__title {
-    text-align: center;
-    font-size: 26px;
-    padding: 10px;
-  }
-
-  &__price {
-    font-style: 14px;
-    text-align: center;
-  }
-
-  &__price span{
-    color: @orange;
-  }
-
-}
 

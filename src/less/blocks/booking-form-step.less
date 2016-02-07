@@ -1,37 +1,20 @@
 .booking-form-step {
   padding: 50px 0;
-  text-align: center;
 
   &--gray {
     background-color: #f1f1f1;
   }
 
   &__wrapper {
-    .container-fixed();
-
-      @media (min-width: @screen-sm-min) {
-        width: @container-sm;
-      }
-      @media (min-width: @screen-md-min) {
-        width: @container-md;
-      }
-      @media (min-width: @screen-lg-min) {
-        width: @container-lg;
-      }
-      overflow: hidden;
+    .make-container();
   }
 
   & label {
     text-transform: uppercase;
   }
 
-  & input[type="text"]{
-    border: 1px solid @gray--light;
-  }
-
   &__number {
-    .make-lg-column-offset(2);
-    .make-lg-column(8);
+    .make-lg-column(12);
     .make-md-column(12);
 
     font-style: 14px;
