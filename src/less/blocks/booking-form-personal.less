@@ -2,19 +2,42 @@
   .make-row();
   &__inner {
     .make-lg-column-offset(2);
-    .make-lg-column(8);
+    .make-lg-column(8); 
     background-color: #fff;
+    padding: 0;
     & div {
       display: inline-block;
-      width: 48%;
+      vertical-align: top;
+      // .make-lg-column(6);
+      color: @gray--dark;
+      padding-bottom: 25px;
+      position: relative; 
+      @media (min-width: @screen-sm-min) {
+        width: 47%; //percentage((@columns / @grid-columns))
+        &:nth-child(2n+1) {
+          margin-right: 30px;
+        }
+      }
+      @media (max-width: @screen-xs-max) {
+        width: 100%;
+      }     
     }
   }
-  & input {
-    //.make-lg-column(6);
+  & input {    
     height: 48px;
     line-height: 48px;
     width: 100%;
     border: 1px solid @gray--light;
+    padding-left: 25px;
+    &.valid:before {
+      content: '';
+      background-image: url('../img/check.png');
+      width: 16px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      top: 28px;
+    }
   }
   
 }

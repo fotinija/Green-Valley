@@ -336,10 +336,10 @@ p {
 	width: 29px;
 	height: 24px;
 	background-image: url('../img/hamburger.png');
+	cursor: pointer;
 }
 
 .main-nav {
-	position: relative;
 	min-height: 1px;
 	display: inline-block;
 	vertical-align: top;
@@ -347,6 +347,7 @@ p {
 	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
+	position: relative;
 	margin: 0;
 	padding-top: 10px 0 0;
 }
@@ -357,7 +358,8 @@ p {
 }
 
 .main-nav__item {
-	display: inline;
+	display: inline-block;
+	vertical-align: middle;
 	padding-right: 10px;
 }
 
@@ -478,8 +480,11 @@ p {
 	overflow: hidden;
 }
 
-.promo__slide-title {
+.promo span {
 	background-color: #fff;
+}
+
+.promo__slide-title {
 	padding: 10px;
 	font-size: 36px;
 	margin-top: 70px;
@@ -1312,10 +1317,6 @@ p {
 	overflow: hidden;
 }
 
-.booking-form-step label {
-	text-transform: uppercase;
-}
-
 .booking-form-step__number {
 	position: relative;
 	display: inline-block;
@@ -1380,6 +1381,7 @@ p {
 
 .booking-form-dates label {
 	display: inline-block;
+	text-transform: uppercase;
 	border-right: 1px solid #ebebeb;
 	text-align: center;
 }
@@ -1414,15 +1416,18 @@ p {
 	padding-left: 15px;
 	padding-right: 15px;
 	border: 1px solid #ebebeb;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .booking-form-place-living label {
 	display: inline-block;
 	position: relative;
+	text-transform: uppercase;
 	margin: 25px 0;
 	text-align: center;
 	cursor: pointer;
-	height: 158px;
+	height: 115px;
 	width: 49%;
 }
 
@@ -1495,17 +1500,11 @@ p {
 
 .booking-form-type-cottage label {
 	display: inline-block;
+	vertical-align: top;
+	text-transform: uppercase;
 	text-align: center;
 	cursor: pointer;
-	padding: 40px 0;
-	width: 24%;
-	margin: 25px 0;
-	border-right: 1px solid #ebebeb;
 	position: relative;
-}
-
-.booking-form-type-cottage label:last-child {
-	border-right: none;
 }
 
 .booking-form-type-cottage input[type="radio"] {
@@ -1520,8 +1519,6 @@ p {
 	width: 16px;
 	height: 12px;
 	position: absolute;
-	top: 70px;
-	left: 50%;
 	-webkit-transform: translate(-50%);
 	transform: translate(-50%);
 }
@@ -1597,11 +1594,15 @@ p {
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #fff;
+	padding: 0;
 }
 
 .booking-form-personal__inner div {
 	display: inline-block;
-	width: 48%;
+	vertical-align: top;
+	color: #4c4c4c;
+	padding-bottom: 25px;
+	position: relative;
 }
 
 .booking-form-personal input {
@@ -1609,6 +1610,17 @@ p {
 	line-height: 48px;
 	width: 100%;
 	border: 1px solid #ebebeb;
+	padding-left: 25px;
+}
+
+.booking-form-personal input.valid:before {
+	content: '';
+	background-image: url('../img/check.png');
+	width: 16px;
+	height: 12px;
+	position: absolute;
+	left: 0;
+	top: 28px;
 }
 
 .booking-form-payment {
@@ -1636,6 +1648,121 @@ p {
 	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+.booking-form-payment label {
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.booking-form-payment__arrive {
+	background-color: #fff;
+	margin-bottom: 25px;
+	padding: 0 15px;
+}
+
+.booking-form-payment__arrive label {
+	width: 163px;
+	display: inline-block;
+	padding-left: 40px;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.booking-form-payment__arrive div {
+	display: inline-block;
+}
+
+.booking-form-payment__now {
+	padding: 0 15px;
+	margin-bottom: 25px;
+	background-color: #fff;
+}
+
+.booking-form-payment__now label:first-child {
+	width: 163px;
+	display: inline-block;
+	padding-left: 40px;
+	padding-top: 25px;
+	line-height: 1;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.booking-form-payment__now label {
+	display: inline-block;
+	padding-bottom: 15px;
+	line-height: 30px;
+}
+
+.booking-form-payment__now div {
+	display: inline-block;
+}
+
+.booking-form-payment__now input[type="text"] {
+	height: 48px;
+	line-height: 48px;
+	width: 100%;
+	border: 1px solid #ebebeb;
+	color: #979696;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.booking-form-payment__total {
+	padding: 0 15px;
+	padding-bottom: 25px;
+	background-color: #fff;
+}
+
+.booking-form-payment__total-title {
+	padding-top: 25px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.booking-form-payment__summa {
+	font-size: 16px;
+	text-align: center;
+}
+
+.booking-form-payment__error {
+	position: relative;
+}
+
+.booking-form-payment__error:before {
+	content: '';
+	background-image: url('../img/attention.png');
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	padding-top: 20px;
+	width: 28px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.booking-form-payment input[type="radio"] {
+	display: none;
+}
+
+.booking-form-payment input[type="radio"] + span:before {
+	content: '';
+	background-image: url('../img/no-check.png');
+	width: 16px;
+	height: 12px;
+	position: absolute;
+	left: 0;
+	top: 28px;
+}
+
+.booking-form-payment input[type="radio"]:checked + span:before {
+	background-image: url('../img/check.png');
+}
+
+.booking-form-payment .btn {
+	margin-top: 50px;
 }
 
 @media (min-width: 320px) {
@@ -1966,6 +2093,42 @@ td.visible-md {
 	margin: 20px 0;
 }
 
+.booking-form-type-cottage label {
+	border-right: 1px solid #ebebeb;
+	width: 24%;
+	padding: 40px 0;
+	margin: 25px 0;
+}
+
+.booking-form-type-cottage label:last-child {
+	border-right: none;
+}
+
+.booking-form-type-cottage input[type="radio"]:checked + span:after {
+	top: 70px;
+	left: 50%;
+}
+
+.booking-form-personal__inner div {
+	width: 47%;
+}
+
+.booking-form-personal__inner div:nth-child(2n+1) {
+	margin-right: 30px;
+}
+
+.booking-form-payment__now label {
+	width: 47%;
+}
+
+.booking-form-payment__now label:nth-child(2n+1) {
+	margin-right: 30px;
+}
+
+.booking-form-payment__now label:first-child {
+	margin-right: 0;
+}
+
 }
 
 @media (min-width: 1200px) {
@@ -2278,6 +2441,23 @@ td.visible-lg {
 
 @media (max-width: 1199px) {
 
+.main-nav {
+	position: absolute;
+	top: 90px;
+	left: 0;
+	width: 100%;
+}
+
+.main-nav__item {
+	display: block;
+	text-align: center;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.main-nav__link {
+	line-height: 55px;
+}
+
 .rooms-list__container {
 	padding: 0;
 }
@@ -2361,6 +2541,24 @@ td.visible-xs {
 }
 
 .booking-form-dates label {
+	width: 100%;
+}
+
+.booking-form-type-cottage label {
+	width: 100%;
+	padding: 15px 0;
+}
+
+.booking-form-type-cottage input[type="radio"]:checked + span:after {
+	top: 19px;
+	left: 25%;
+}
+
+.booking-form-personal__inner div {
+	width: 100%;
+}
+
+.booking-form-payment__now label {
 	width: 100%;
 }
 

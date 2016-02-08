@@ -5,11 +5,123 @@
     .make-lg-column(8);
   }
   &__methods {
-    //.make-lg-column(8);
+    //.make-lg-column(8);    
+  }
+  & label {
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__arrive {
+    background-color: #fff;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    & label {
+      width: 163px;
+      display: inline-block;
+      padding-left: 40px;
+      padding-top: 25px;
+      padding-bottom: 15px;
+      position: relative;
+    }
+    div {
+      display: inline-block;
+    }
+  }
+
+  &__now {
+    padding: 0 15px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    & label:first-child {
+      width: 163px;
+      display: inline-block;
+      padding-left: 40px;
+      padding-top: 25px;
+      line-height: 1;
+      padding-bottom: 15px;
+      position: relative;
+    }
+    & label {
+      display: inline-block;
+      @media (max-width: @screen-xs-max) {
+        width: 100%;
+      }
+      @media (min-width: @screen-sm-min) {
+        width: 47%;
+        &:nth-child(2n+1) {
+          margin-right: 30px;
+        }
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+      padding-bottom: 15px;
+      line-height: 30px;
+    }
+    div {
+      display: inline-block;
+    }
+    & input[type="text"] {    
+      height: 48px;
+      line-height: 48px;
+      width: 100%;
+      border: 1px solid @gray--light;
+      color: @gray;
+      text-align: center;
+      padding: 0 15px;
+    }
+  
   }
   &__total {
     //.make-lg-column(8);
+    padding: 0 15px;
+    padding-bottom: 25px;
+    background-color: #fff;
+  }
+  &__total-title {
+    padding-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+
   }
 
+  &__summa {
+    font-size: 16px;
+    text-align: center;
+  }
+  &__error {
+    position: relative;
+    &:before {
+      content: '';
+      background-image: url('../img/attention.png');
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      padding-top: 20px;
+      width: 28px;
+      height: 12px;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
 
+  & input[type="radio"] {
+    display: none;
+    & + span:before {
+      content: '';
+      background-image: url('../img/no-check.png');
+      width: 16px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      top: 28px;
+    }
+    &:checked {
+      & + span:before {
+        background-image: url('../img/check.png');
+      }
+    }
+  }
+  & .btn {
+    margin-top: 50px;
+  }
 }

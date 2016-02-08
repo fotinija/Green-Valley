@@ -7,16 +7,23 @@
   }
   & label {
     display: inline-block;
-    margin: 25px 0;
+    vertical-align: top;
+    text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    padding: 40px 0;
-    width: 24%;
-    margin: 25px 0;
-    border-right: 1px solid @gray--light;
     position: relative;
-    &:last-child {
-      border-right: none;
+    @media (min-width: @screen-sm-min) {
+      border-right: 1px solid @gray--light;
+      width: 24%;
+      padding: 40px 0;
+      margin: 25px 0;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    @media (max-width: @screen-xs-max) {
+      width: 100%;
+      padding: 15px 0;
     }
   }
 
@@ -30,8 +37,15 @@
       width: 16px;
       height: 12px;
       position: absolute;
-      top: 70px;
-      left: 50%;
+      @media (min-width: @screen-sm-min) {
+        top: 70px;
+        left: 50%;
+      }
+      @media (max-width: @screen-xs-max) {
+        top: 19px;
+        left: 25%;
+      }
+      
       transform: translate(-50%);
     }
   }

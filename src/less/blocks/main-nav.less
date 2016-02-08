@@ -1,6 +1,7 @@
 .main-nav {
   .make-lg-column(5);
   .make-sm-column(5);
+  position: relative;
 
   margin: 0;
   //padding: 0;
@@ -13,7 +14,8 @@
 	}
 
 	&__item {
-		display: inline;
+		display: inline-block;
+    vertical-align: middle;
     padding-right: 10px;
 
     &:last-child {
@@ -39,6 +41,21 @@
         position: absolute;
         width: 50%;
       }
+    }
+  }
+
+  @media (max-width: @screen-md-max){
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    &__item {
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid @gray--light;
+    }
+    &__link {
+      line-height: 55px;
     }
   }
 }

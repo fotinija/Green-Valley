@@ -35,8 +35,8 @@
       <div class="page-header__inner">
         <a href="index.html" class="page-header__logo"><img src="img/logo.png"></a>
         <span id="menu_trigger" class="hamburger hidden-lg"></span>
-        <nav class="main-nav">
-          <ul class="main-nav__list visible-lg">
+        <nav class="main-nav visible-lg">
+          <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="room-list.html" class="main-nav__link">Номера</a>
             </li>
@@ -117,7 +117,7 @@
           <label for="type-cottage-portovyj"><input type="radio" name="type-cottage" id="type-cottage-portovyj"><span>Портовый</span></label>
         </div>
       </div>
-      <div class="description-cottage">
+      <div class="description-cottage hidden-xs">
         <div class="description-cottage__inner">
           <div><img src="" alt=""><span>Площать 100 м<sup>2</sup></span></div>
           <div><img src="" alt=""><span>3 комнаты</span></div>
@@ -135,10 +135,10 @@
       <div class="booking-form-step__title">Персональная информация</div>
       <div class="booking-form-personal">
         <div class="booking-form-personal__inner">
-          <div><input type="text" placeholder="Имя"></div>
-          <div><input type="text" placeholder="Фамилия"></div>
-          <div><input type="text" placeholder="Номер телефона"><br/>Мы свяжимся с вами в случае необходимости</div>
-          <div><input type="email" placeholder="E-mail"><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+          <div><input type="text" placeholder="Имя"><span></span></div>
+          <div><input type="text" placeholder="Фамилия"><span></span></div>
+          <div><input type="text" placeholder="Номер телефона"><span></span><br/>Мы свяжимся с вами в случае необходимости</div>
+          <div><input type="email" placeholder="E-mail"><span></span><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
         </div>
       </div>
     </div>
@@ -151,21 +151,23 @@
       <div class="booking-form-payment">
         <div class="booking-form-payment__inner">
           <div class="booking-form-payment__methods">
-            <div class="booking-form-payment__arive">
-              <label>по приезду<input type="radio" name="payment"></label>
-              <div>Вы можете произвести оплату по факту заселения.</div>
+            <div class="booking-form-payment__arrive">
+              <label><input type="radio" name="payment"><span>По приезду</span></label>
+              <div class="hidden-xs">Вы можете произвести оплату по факту заселения.</div>
             </div>
             <div class="booking-form-payment__now">
-              <input type="radio" name="payment"><span>Сейчас</span>
-              Прямо сейчас вы можете произвести оплату с помощью банковской карты.
-              <label for="card-number">номер карты<br><input type="text" name="card-number" id="card-number"></label>
+              <label><input type="radio" name="payment"><span>Сейчас</span></label>
+              <div class="hidden-xs">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
+              <label for="card-number">Номер карты<br><input type="text" name="card-number" id="card-number"></label>
               <label for="card-cvv">Код CVV<br><input type="text" name="card-cvv" id="card-cvv"></label>
               <label for="card-fio">Фамилия владельца карты<br><input type="text" name="card-fio" id="card-fio"></label>
-               <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired"></label>
+              <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired"></label>
             </div>
           </div>
           <div class="booking-form-payment__total">
-            <span class="">К оплате</span>
+            <p class="booking-form-payment__total-title">К оплате</p>
+            <p class="booking-form-payment__summa">&mdash;</p>
+            <p class="booking-form-payment__error">Пожалуйста, выберите дату въезда и выезда, чтобы увидеть сумму к оплате</p>
           </div>
           <input type="submit" value="Забронировать" class="btn btn--green btn--wide">
         </div>
