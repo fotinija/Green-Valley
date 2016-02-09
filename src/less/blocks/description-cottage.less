@@ -1,6 +1,15 @@
 .description-cottage {
   .make-row();
   margin-top: 20px;
+  position: relative;
+  &:before {
+    content: '';
+    border: 10px solid transparent;
+    border-bottom: 16px solid #fff;
+    position: absolute;
+    left: (percentage((2 / 12)) + 7%);
+    top: -25px;
+  }
   &__inner {
     .make-lg-column(8);
     .make-lg-column-offset(2);
@@ -9,17 +18,53 @@
 
     & div {
       display: inline-block;
-      margin: 25px 0;
       text-align: center;
       cursor: pointer;
-      padding: 40px 0;
+      padding: 85px 0 25px;
       width: 19%;
-      margin: 25px 0;
       border-right: 1px solid @gray--light;
       position: relative;
+      text-transform: uppercase;
       &:last-child {
         border-right: none;
       }
+    }
+    & span:before {
+      content: '';
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 80px;
+      height: 43px;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translate(-50%);
+      opacity: 1;
+    }
+  }
+  &__square {
+    & span:before {
+      background-image: url('../img/squad-rule.png');
+    }
+  }
+  &__rooms {
+    & span:before {
+      background-image: url('../img/door.png');
+    }
+  }
+  &__beds {
+    & span:before {
+      background-image: url('../img/bed.png');
+    }
+  }
+  &__bath {
+    & span:before {
+      background-image: url('../img/bath.png');
+    }
+  }
+  &__wi-fi {
+    & span:before {
+      background-image: url('../img/wi-fi.png');
     }
   }
 }

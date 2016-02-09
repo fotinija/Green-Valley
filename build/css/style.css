@@ -496,7 +496,7 @@ p {
 	font-size: 18px;
 }
 
-.promo__slide-description p {
+.promo__slide-description span {
 	background-color: #fff;
 }
 
@@ -703,8 +703,9 @@ p {
 }
 
 .review__slide-inner {
-	padding: 80px 15px 20px;
+	padding: 80px 40px 20px;
 	background-color: #fff;
+	text-align: center;
 }
 
 .review__button {
@@ -720,10 +721,22 @@ p {
 	padding-top: 50px;
 }
 
+.review__slide-footer {
+	margin-top: 20px;
+}
+
 .review__author {
 	position: absolute;
 	top: -20px;
-	left: 40%;
+	left: 50%;
+	font-weight: bold;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+}
+
+.review__date {
+	font-size: 12px;
+	font-weight: normal;
 }
 
 .review__author-img {
@@ -855,6 +868,13 @@ p {
 	padding-bottom: 10px;
 }
 
+.location__sub-title {
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+	padding-top: 35px;
+}
+
 .location__bus {
 	position: relative;
 	min-height: 1px;
@@ -866,6 +886,18 @@ p {
 	padding-right: 15px;
 }
 
+.location__bus:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background-image: url('../img/bus.png');
+	width: 50px;
+	height: 29px;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+}
+
 .location__train {
 	position: relative;
 	min-height: 1px;
@@ -875,6 +907,18 @@ p {
 	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+.location__train:before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 3px;
+	background-image: url('../img/train.png');
+	width: 58px;
+	height: 26px;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
 }
 
 .accommodation {
@@ -1164,6 +1208,11 @@ p {
 	border: 1px solid #fff;
 }
 
+.btn--bordered:hover {
+	background: #fff;
+	color: #0ab89d;
+}
+
 .btn--underline {
 	background: none;
 	padding: 0;
@@ -1303,6 +1352,7 @@ p {
 
 .booking-form-step {
 	padding: 50px 0;
+	position: relative;
 }
 
 .booking-form-step--gray {
@@ -1528,6 +1578,7 @@ p {
 	margin-right: -15px;
 	font-size: 0;
 	margin-top: 20px;
+	position: relative;
 }
 
 .flexbox .description-cottage {
@@ -1538,6 +1589,15 @@ p {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+
+.description-cottage:before {
+	content: '';
+	border: 10px solid transparent;
+	border-bottom: 16px solid #fff;
+	position: absolute;
+	left: 23.66666667%;
+	top: -25px;
 }
 
 .description-cottage__inner {
@@ -1557,15 +1617,49 @@ p {
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
-	padding: 40px 0;
+	padding: 85px 0 25px;
 	width: 19%;
-	margin: 25px 0;
 	border-right: 1px solid #ebebeb;
 	position: relative;
+	text-transform: uppercase;
 }
 
 .description-cottage__inner div:last-child {
 	border-right: none;
+}
+
+.description-cottage__inner span:before {
+	content: '';
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 43px;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	opacity: 1;
+}
+
+.description-cottage__square span:before {
+	background-image: url('../img/squad-rule.png');
+}
+
+.description-cottage__rooms span:before {
+	background-image: url('../img/door.png');
+}
+
+.description-cottage__beds span:before {
+	background-image: url('../img/bed.png');
+}
+
+.description-cottage__bath span:before {
+	background-image: url('../img/bath.png');
+}
+
+.description-cottage__wi-fi span:before {
+	background-image: url('../img/wi-fi.png');
 }
 
 .booking-form-personal {
@@ -1915,6 +2009,10 @@ td.visible-md {
 
 .promo__slide-container {
 	width: 750px;
+}
+
+.promo__slide-title {
+	margin-bottom: 20px;
 }
 
 .relax__container {
@@ -2526,8 +2624,23 @@ td.visible-xs {
 	display: none !important;
 }
 
+.promo__slide-container {
+	padding: 0;
+}
+
 .promo__slide-title {
-	margin-bottom: 20px;
+	font-size: 18px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.promo__slide-description {
+	width: 100%;
+	background-color: #fff;
+}
+
+.offers__slide-inner {
+	left: 0;
 }
 
 .other-rooms__inner {
