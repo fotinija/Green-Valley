@@ -3,9 +3,13 @@
   &__inner {
     .make-lg-column-offset(2);
     .make-lg-column(8);
+    display: flex;
   }
   &__methods {
-    //.make-lg-column(8);    
+    //.make-lg-column(8);  
+    @media (min-width: @screen-xs-min) {
+      order: 2;
+    }  
   }
   & label {
     text-transform: uppercase;
@@ -74,6 +78,9 @@
   }
   &__total {
     //.make-lg-column(8);
+    @media (min-width: @screen-xs-min) {
+      order: 1;
+    }
     padding: 0 15px;
     padding-bottom: 25px;
     background-color: #fff;

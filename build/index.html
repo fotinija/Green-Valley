@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link href="css/style.min.css" rel="stylesheet" media="screen">
+
 <script src="js/modernizr-custom.js"></script>
 
 <script>
@@ -61,7 +62,7 @@
   </header>
   
   <section class="promo">
-    <div class="promo__wrapper-slides">
+    <ul class="promo__wrapper-slides">
       <div class="promo__slide  promo__slide--active" style="background-image: url('img/promo-bg-1.png');">
         <div class="promo__slide-container">
           <div class="promo__slide-inner">
@@ -77,33 +78,69 @@
           <p class="promo__slide-description"></p>
         </div>
       </div>
-      <ul class="promo__tabs">
-        <li class="promo__tab  promo__tab--active"><a href="">Семейный отдых</a></li>
-        <li class="promo__tab"><a href="">Корпоративный</a></li>
-      </ul>
+     
     </div>
   </section>
   
   <section class="relax">
-    <div class="relax__container">
+  <div class="relax__container">
       <div class="relax__inner">
-        <h1 class="relax__title">Здоровый отдых</h1>
-        <div class="relax__wrapper-text">
-          <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. <br/>Почувствуйте отдых!</p>
-        </div>
-        <ul class="relax__features hidden-xs">
-          <li style="background-image: url('img/relax-swimming-pool.png');">бассейн</li>
-          <li style="background-image: url('img/relax-sport.png');">спортивная площадка</li>
-          <li style="background-image: url('img/relax-billiards.png');">бильярд</li>
-          <li style="background-image: url('img/relax-spa.png');">спа</li>
-          <li style="background-image: url('img/relax-bath.png');">бани</li>
-          <li style="background-image: url('img/relax-animation.png');">анимация</li>
+        <ul class="relax__tabs">
+          <li class="relax__tab  relax__tab--active"><a href="#family">Семейный отдых</a></li>
+          <li class="relax__tab"><a href="#corporate">Корпоративный</a></li>
         </ul>
-      </div>
+        
+
+        <div class="relax__list">
+          <div id="family" class="relax__item relax__item--active js-relax-active">    
+            <h1 class="relax__title">Здоровый отдых</h1>
+               <div class="relax__wrapper-text">
+                 <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. <br/>Почувствуйте отдых!</p>
+               </div>
+               <ul class="relax__features hidden-xs">
+                 <li style="background-image: url('img/relax-swimming-pool.png');">бассейн</li>
+                 <li style="background-image: url('img/relax-sport.png');">спортивная площадка</li>
+                 <li style="background-image: url('img/relax-billiards.png');">бильярд</li>
+                 <li style="background-image: url('img/relax-spa.png');">спа</li>
+                 <li style="background-image: url('img/relax-bath.png');">бани</li>
+                 <li style="background-image: url('img/relax-animation.png');">анимация</li>
+              </ul>
+            </div>
+
+            <div id="corporate" class="relax__item">    
+              <h1 class="relax__title">Корпоративный отдых</h1>
+               <div class="relax__wrapper-text">
+                 <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. <br/>Почувствуйте отдых!</p>
+               </div>
+               <ul class="relax__features hidden-xs">
+                 <li style="background-image: url('img/relax-swimming-pool.png');">бассейн</li>
+                 <li style="background-image: url('img/relax-sport.png');">спортивная площадка</li>
+                 <li style="background-image: url('img/relax-billiards.png');">бильярд</li>
+                 <li style="background-image: url('img/relax-spa.png');">спа</li>
+                 <li style="background-image: url('img/relax-bath.png');">бани</li>
+                 <li style="background-image: url('img/relax-animation.png');">анимация</li>
+              </ul>
+            </div>
+ 
+        </div>   
+       </div>
     </div>
   </section>
   
-  <div class="gallery"></div>
+  <div class="gallery">
+    <div class="gallery__container">
+      <div class="gallery__main"><img src="img/gallery1.png" alt="" class="gallery__main-img"></div>
+      <div class="gallery__thumbs">
+        <div><a href="img/gallery1.png"><img src="img/gallery1-thumbs.png" alt=""></a></div>
+        <div><a href="img/gallery2.png"><img src="img/gallery2-thumbs.png" alt=""></a></div>
+        <div><a href="img/gallery3.png"><img src="img/gallery3-thumbs.png" alt=""></a></div>
+        <div><a href="img/gallery4.png"><img src="img/gallery4-thumbs.png" alt=""></a></div>
+        <div><a href="img/gallery5.png"><img src="img/gallery5-thumbs.png" alt=""></a></div>
+        <div><a href="img/gallery6.png"><img src="img/gallery6-thumbs.png" alt=""></a></div>
+        <div><a href="img/gallery7.png"><img src="img/gallery7-thumbs.png" alt=""></a></div>
+      </div>
+    </div>
+  </div>
 
   <section class="review">
     <div class="review__container">
@@ -111,7 +148,7 @@
         <h1 class="review__title">Отзывы</h1>
         <div class="review__carousel">
 
-          <div class="review__arrow-left hidden-xs"></div>
+          <!-- <div class="review__arrow-left hidden-xs"></div> -->
 
           <div class="review__slide">
             <div class="review__slide-inner">
@@ -146,7 +183,7 @@
             </div>
           </div>
 
-          <div class="review__arrow-right  hidden-xs"></div>
+          <!-- <div class="review__arrow-right  hidden-xs"></div> -->
 
         </div>
         <div class="review__button">
@@ -164,6 +201,13 @@
           <div class="offers__slide" style="background-image: url('img/offers-bg-1.png');">
             <div class="offers__slide-inner">
               <div class="offers__slide-title">Скидки в мае</div>
+              <div class="offers__slide-description">Забронируйте номер или коттедж любой категории до 31 июня и получите
+          скидку 10% !</div>
+            </div>
+          </div>
+          <div class="offers__slide" style="background-image: url('img/offers-bg-1.png');">
+            <div class="offers__slide-inner">
+              <div class="offers__slide-title">Скидки в январе</div>
               <div class="offers__slide-description">Забронируйте номер или коттедж любой категории до 31 июня и получите
           скидку 10% !</div>
             </div>
@@ -202,7 +246,7 @@
         <div class="accommodation__hotel">
           <div class="accommodation__hotel-inner">
             <div class="accommodation__img">
-              <img src="img/hotel.png" height="199" width="379" alt="">
+              <img src="img/hotel.png" alt="">
             </div>
             <div class="accommodation__title-item">В отеле</div>
             <div class="room-price">от <span>4000</span> руб./сутки</div>
@@ -211,7 +255,7 @@
         <div class="accommodation__cottage">
           <div class="accommodation__cottage-inner">
             <div class="accommodation__img">
-              <img src="img/cottage.png" height="199" width="378" alt="">
+              <img src="img/cottage.png" alt="">
             </div>
             <div class="accommodation__title-item">В коттедже</div>
             <div class="room-price">от <span>6800</span> руб./сутки</div>
@@ -220,7 +264,8 @@
       </div>
     </div>
   </section>
-  
+
+ 
 <footer class="page-footer">
 	<div class="page-footer__container">
 		<div class="page-footer__inner">
@@ -230,6 +275,11 @@
 		</div>
 	</div>
 </footer>
-  
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/script.js"></script>
+
+ 
 </body>
 </html>

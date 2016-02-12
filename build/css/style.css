@@ -500,46 +500,6 @@ p {
 	background-color: #fff;
 }
 
-.promo__tabs {
-	text-align: center;
-}
-
-.promo__tab {
-	display: inline;
-	vertical-align: middle;
-	position: relative;
-	margin-right: 20px;
-}
-
-.promo__tab a {
-	color: #191919;
-}
-
-.promo__tab--active a {
-	color: #ff7435;
-}
-
-.promo__tab--active,
-.promo__tab a:hover,
-.promo__tab a:active,
-.promo__tab a:focus {
-	text-decoration: none;
-	color: #ff7435;
-}
-
-.promo__tab--active::after,
-.promo__tab a:hover::after,
-.promo__tab a:active::after,
-.promo__tab a:focus::after {
-	background-color: #ff7435;
-	width: 50%;
-	height: 2px;
-	position: absolute;
-	bottom: -5px;
-	content: "";
-	left: 25%;
-}
-
 .relax {
 	background-image: url('../img/relax-bg.png');
 	background-repeat: no-repeat;
@@ -571,6 +531,14 @@ p {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+
+.relax__item {
+	display: none;
+}
+
+.relax__item--active {
+	display: block;
 }
 
 .relax__title {
@@ -620,6 +588,76 @@ p {
 	text-align: center;
 }
 
+.relax__tabs {
+	position: relative;
+	min-height: 1px;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	font-size: 14px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.relax__tab {
+	display: inline;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 20px;
+}
+
+.relax__tab a {
+	color: #191919;
+}
+
+.relax__tab--active a {
+	color: #ff7435;
+}
+
+.relax__tab--active,
+.relax__tab a:hover,
+.relax__tab a:active,
+.relax__tab a:focus {
+	text-decoration: none;
+	color: #ff7435;
+}
+
+.relax__tab--active::after,
+.relax__tab a:hover::after,
+.relax__tab a:active::after,
+.relax__tab a:focus::after {
+	background-color: #ff7435;
+	width: 50%;
+	height: 2px;
+	position: absolute;
+	bottom: -5px;
+	content: "";
+	left: 25%;
+}
+
+.gallery__container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: hidden;
+}
+
+.gallery__main {
+	height: 497px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.gallery__thumbs div {
+	height: 113px;
+	overflow: hidden;
+	text-align: center;
+}
+
 .review {
 	background-image: url('../img/review-bg.png');
 	background-repeat: no-repeat;
@@ -665,6 +703,10 @@ p {
 	text-align: center;
 	font-size: 26px;
 	margin: 50px 0 0;
+}
+
+.review__carousel {
+	padding: 0 30px;
 }
 
 .review__arrow-left {
@@ -761,53 +803,17 @@ p {
 	overflow: hidden;
 }
 
-.offers__inner {
-	margin-left: -15px;
-	margin-right: -15px;
-	font-size: 0;
-}
-
-.flexbox .offers__inner {
-	font-size: 14px;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-}
-
 .offers__title {
-	position: relative;
-	min-height: 1px;
-	display: inline-block;
-	vertical-align: top;
-	width: 100%;
-	font-size: 14px;
-	padding-left: 15px;
-	padding-right: 15px;
 	color: #191919;
 	font-size: 26px;
 	text-align: center;
 	padding-bottom: 40px;
 }
 
-.offers__slides {
-	padding-left: 15px;
-	padding-right: 15px;
-	position: relative;
-	display: inline-block;
-	vertical-align: top;
-	font-size: 14px;
-	width: 100%;
-	min-height: 1px;
-	padding-left: 0;
-	padding-right: 0;
-}
-
 .offers__slide {
 	background-size: cover;
 	height: 330px;
+	width: 100%;
 }
 
 .offers__slide-inner {
@@ -826,7 +832,7 @@ p {
 }
 
 .location {
-	padding: 20px 0;
+	padding: 100px 0 70px;
 }
 
 .location__container {
@@ -1742,6 +1748,9 @@ p {
 	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .booking-form-payment label {
@@ -1859,6 +1868,446 @@ p {
 	margin-top: 50px;
 }
 
+.owl-carousel .owl-controls .owl-dots {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.owl-carousel .owl-controls .owl-dot {
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	border: 1px solid #ff7435;
+	border-radius: 7px;
+	display: inline-block;
+}
+
+.owl-carousel .owl-controls .active {
+	background-color: #ff7435;
+}
+
+.owl-carousel .owl-controls .owl-nav div {
+	display: inline-block;
+	color: #fff;
+	font-size: 16px;
+	position: absolute;
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev {
+	background-image: url('../img/arrow-left.png');
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 37px;
+	left: 0;
+	top: 50%;
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-next {
+	background-image: url('../img/arrow-right.png');
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 37px;
+	right: 0;
+	top: 50%;
+}
+
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+
+.owl-carousel .animated {
+	-webkit-animation-duration: 1000ms;
+	animation-duration: 1000ms;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+	z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+	z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+
+.owl-height {
+	transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+
+.owl-carousel {
+	display: none;
+	width: 100%;
+	-webkit-tap-highlight-color: transparent; /* position relative and z-index fix webkit rendering fonts issue */
+	position: relative;
+	z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+	position: relative;
+	-ms-touch-action: pan-Y;
+}
+
+.owl-carousel .owl-stage:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+	position: relative;
+	overflow: hidden; /* fix for flashing background */
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+	cursor: pointer;
+	cursor: hand;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+	display: block;
+}
+
+.owl-carousel.owl-loading {
+	opacity: 0;
+	display: block;
+}
+
+.owl-carousel.owl-hidden {
+	opacity: 0;
+}
+
+.owl-carousel .owl-refresh .owl-item {
+	display: none;
+}
+
+.owl-carousel .owl-item {
+	position: relative;
+	min-height: 1px;
+	float: left;
+	-webkit-backface-visibility: hidden;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.owl-carousel .owl-item img {
+	display: block;
+	width: 100%;
+	-webkit-transform-style: preserve-3d;
+}
+
+.owl-carousel.owl-text-select-on .owl-item {
+	-webkit-user-select: auto;
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	user-select: auto;
+}
+
+.owl-carousel .owl-grab {
+	cursor: move;
+	cursor: -webkit-grab;
+	cursor: -o-grab;
+	cursor: -ms-grab;
+	cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+	direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+	float: right;
+}
+
+/* No Js */
+
+.no-js .owl-carousel {
+	display: block;
+}
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+
+.owl-carousel .owl-item .owl-lazy {
+	opacity: 0;
+	transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item img {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+/* 
+ * 	Owl Carousel - Video Plugin
+ */
+
+.owl-carousel .owl-video-wrapper {
+	position: relative;
+	height: 100%;
+	background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px;
+	margin-top: -40px;
+	background: url("owl.video.play.png") no-repeat;
+	cursor: pointer;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	transition: scale 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+	transition: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+	display: none;
+}
+
+.owl-carousel .owl-video-tn {
+	opacity: 0;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+	position: relative;
+	z-index: 1;
+}
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 60px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	box-shadow: 0 0 5px #ccc;
+	border: 5px solid #fff;
+	left: -5px;
+	background: #fff; /*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 10px;
+	background: url(images/controls.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background: url(images/controls.png) no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
 @media (min-width: 320px) {
 
 .promo__slide-title {
@@ -1875,6 +2324,18 @@ p {
 	padding: 30px;
 	text-align: center;
 	padding: 0 0 40px;
+}
+
+.booking-form-payment__methods {
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+}
+
+.booking-form-payment__total {
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
 }
 
 }
@@ -2043,6 +2504,18 @@ td.visible-md {
 	width: 83.33333333%;
 }
 
+.relax__tabs {
+	width: 100%;
+}
+
+.gallery__container {
+	width: 750px;
+}
+
+.gallery__container {
+	width: 750px;
+}
+
 .review__container {
 	width: 750px;
 }
@@ -2061,10 +2534,6 @@ td.visible-md {
 
 .offers__container {
 	width: 750px;
-}
-
-.offers__slides {
-	width: 100%;
 }
 
 .location__container {
@@ -2336,6 +2805,14 @@ td.visible-lg {
 	width: 66.66666667%;
 }
 
+.relax__tabs {
+	width: 100%;
+}
+
+.gallery__container {
+	width: 1170px;
+}
+
 .review__container {
 	width: 1170px;
 }
@@ -2353,7 +2830,7 @@ td.visible-lg {
 }
 
 .review__slide {
-	width: 41.66666667%;
+	width: 100%;
 }
 
 .review__button {
@@ -2362,14 +2839,6 @@ td.visible-lg {
 
 .offers__container {
 	width: 1170px;
-}
-
-.offers__title {
-	width: 100%;
-}
-
-.offers__slides {
-	width: 100%;
 }
 
 .location__container {
@@ -2710,6 +3179,30 @@ td.visible-print {
 
 .hidden-print {
 	display: none !important;
+}
+
+}
+
+@-webkit-keyframes fadeOut {
+
+0% {
+	opacity: 1;
+}
+
+100% {
+	opacity: 0;
+}
+
+}
+
+@keyframes fadeOut {
+
+0% {
+	opacity: 1;
+}
+
+100% {
+	opacity: 0;
 }
 
 }

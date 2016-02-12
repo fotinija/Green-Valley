@@ -65,6 +65,24 @@ module.exports = function(grunt) {
       }
     },
 
+    concat: {
+      start: {
+        src: [
+          // 'src/js/plugin.js',
+          'src/js/script.js'
+        ],
+        dest: 'build/js/script.js'
+      }
+    },
+
+    uglify: {
+      start: {
+        files: {
+          'build/js/script.min.js': ['build/js/script.js']
+        }
+      }
+    },
+
     // процесс копирования
     copy: {
       // копируем картинки
@@ -118,6 +136,13 @@ module.exports = function(grunt) {
         tasks: ['style'],
         options: {
           spawn: false,
+        },
+      },
+      scripts: {
+        files: ['src/js/script.js'],
+        tasks: ['js'],
+        options: {
+          spawn: false
         },
       },
       // следить за картинками
@@ -178,7 +203,7 @@ module.exports = function(grunt) {
     'style',
     'img',
     'includereplace:html',
-    'copy:js',
+    'js',
     'browserSync',
     'watch'
   ]);
@@ -194,6 +219,11 @@ module.exports = function(grunt) {
   // только обработка картинок
   grunt.registerTask('img', [
     'copy:img',
+  ]);
+
+  grunt.registerTask('js', [
+    'concat',                 // объединяем все указанные JS-файлы в build/js/script.min.js
+    'uglify',                 // минифицируем build/js/script.min.js
   ]);
 
 };

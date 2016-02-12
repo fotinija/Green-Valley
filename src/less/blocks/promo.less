@@ -62,35 +62,5 @@
     }
   }
 
-  &__tabs {
-    text-align: center;
-  }
 
-  &__tab {
-    display: inline;
-    vertical-align: middle;
-    position: relative;
-    margin-right: 20px;
-
-    a {
-      color: @text-color;
-    }
-    
-    &--active a{
-       color: @orange;
-    }
-    &--active, & a:hover, & a:active, & a:focus {
-      text-decoration: none;
-      color: @orange;
-      &::after {
-        background-color: @orange;
-        width: 50%;
-        height: 2px;
-        position: absolute;
-        bottom: -5px;
-        content: "";
-        left: 25%;
-      }
-    }
-  }
 }

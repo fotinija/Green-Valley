@@ -1,0 +1,44 @@
+.owl-carousel .owl-controls {
+  & .owl-dots {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  & .owl-dot{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border: 1px solid @orange;
+    border-radius: 7px;
+    display: inline-block;
+  }
+
+  & .active {
+    background-color: @orange;
+  }
+
+  & .owl-nav {
+    & div {
+      display: inline-block;
+      color: #fff;
+      font-size: 16px;
+      position: absolute;
+    }
+    & .owl-prev {
+      background-image: url('../img/arrow-left.png');
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 37px;
+      left: 0;
+      top: 50%;
+    }
+    & .owl-next {
+      background-image: url('../img/arrow-right.png');
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 37px;
+      right: 0;
+      top: 50%;
+    }
+  }
+}
