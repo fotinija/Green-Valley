@@ -65,6 +65,19 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      build: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ['img/sprite_svg/*.svg']
+        }]
+      }
+    },
+
+
     concat: {
       start: {
         src: [
@@ -119,6 +132,23 @@ module.exports = function(grunt) {
         // куда писать результат обработки
         dest: 'build/',
       }
+    },
+
+    svgstore: {
+      options: {
+        includeTitleElement: false,
+        svg: {
+          style: 'display:none',
+        },
+        cleanup: [
+          'fill',
+        ],
+      },
+      default : {
+        files: {
+          'img/sprite.svg': ['img/sprite_svg/*.svg'],
+        },
+      },
     },
 
     // слежение за файлами
@@ -219,6 +249,8 @@ module.exports = function(grunt) {
   // только обработка картинок
   grunt.registerTask('img', [
     'copy:img',
+    'imagemin',
+    'svgstore',    
   ]);
 
   grunt.registerTask('js', [

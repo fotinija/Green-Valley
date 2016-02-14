@@ -60,6 +60,25 @@
       </div>
     </div>
   </header>
+  <nav class="main-nav hidden-lg" id="main_nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="room-list.html" class="main-nav__link">Номера</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Коттедж</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Ресторан</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Отдых</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
   
   <section class="room-header">
     <div class="room-header__title">Эконом</div>
@@ -69,7 +88,19 @@
   <section class="room">
     <div class="room__container">
       <div class="room__inner">
-        <div class="room__gallery"><img src="img/singe-room.png" height="733" width="1100" alt=""></div>
+        <div class="room__gallery-container">
+          <div class="room__gallery">
+            <div class="room__gallery-item">
+              <img src="img/singe-room.png" alt="">
+            </div>
+            <div class="room__gallery-item">
+              <img src="img/singe-room.png" alt="">
+            </div>
+            <div class="room__gallery-item">
+              <img src="img/singe-room.png" alt="">
+            </div>
+          </div>
+        </div>
         <div class="room__description">
           <div class="room__description-title">О номере</div>
           <div class="room__description-text">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на&nbsp;проживание 1-2 человек. Часть номеров с видом на Финский залив.</div>
@@ -149,7 +180,12 @@
 		</div>
 	</div>
 </footer>
-  
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/script.js"></script>
+
+   
   
 </body>
 </html>

@@ -19,7 +19,8 @@
   &__inner {
     .make-row();
   }
-  &__gallery {
+
+  &__gallery-container {
     @media (max-width: @screen-md-max) {
      width: 100%;
     }
@@ -28,6 +29,14 @@
       position: absolute;
       right: 0;
     }
+  }
+
+  & .owl-carousel .owl-controls .owl-prev {
+    left: 15px;
+  }
+
+  & .owl-carousel .owl-controls .owl-next {
+    right: 15px;
   }
   
   .btn, &__price {
@@ -73,6 +82,8 @@
   &__description-text {
     margin: 14px 0;
   }
+
+
 }
 
 .room-booking {
