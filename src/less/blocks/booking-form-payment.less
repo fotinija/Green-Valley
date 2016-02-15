@@ -1,13 +1,18 @@
 .booking-form-payment {
   .make-row();
+  color: @gray--dark;
+
   &__inner {
     .make-lg-column-offset(2);
     .make-lg-column(8);
-    display: flex;
+    @media (min-width: @screen-sm-min) {
+      display: flex;
+    }  
+    
   }
   &__methods {
     //.make-lg-column(8);  
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-sm-min) {
       order: 2;
     }  
   }
@@ -34,8 +39,13 @@
 
   &__now {
     padding: 0 15px;
-    margin-bottom: 25px;
     background-color: #fff;
+    
+    @media (max-width: @screen-xs-max) {
+        margin-bottom: 25px;
+    }
+
+    
     & label:first-child {
       width: 163px;
       display: inline-block;
@@ -45,6 +55,7 @@
       padding-bottom: 15px;
       position: relative;
     }
+
     & label {
       display: inline-block;
       @media (max-width: @screen-xs-max) {
@@ -53,7 +64,7 @@
       @media (min-width: @screen-sm-min) {
         width: 47%;
         &:nth-child(2n+1) {
-          margin-right: 30px;
+          margin-right: 15px;
         }
         &:first-child {
           margin-right: 0;
@@ -62,9 +73,11 @@
       padding-bottom: 15px;
       line-height: 30px;
     }
+
     div {
       display: inline-block;
     }
+
     & input[type="text"] {    
       height: 48px;
       line-height: 48px;
@@ -76,15 +89,18 @@
     }
   
   }
+
   &__total {
     //.make-lg-column(8);
-    @media (min-width: @screen-xs-min) {
+    @media (min-width: @screen-sm-min) {
       order: 1;
+      margin-right: 20px;
     }
     padding: 0 15px;
     padding-bottom: 25px;
     background-color: #fff;
   }
+
   &__total-title {
     padding-top: 25px;
     text-align: center;
@@ -96,6 +112,7 @@
     font-size: 16px;
     text-align: center;
   }
+
   &__error {
     position: relative;
     &:before {

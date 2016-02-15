@@ -72,7 +72,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ['img/sprite_svg/*.svg']
+          src: ['build/img/sprite_svg/*.svg']
         }]
       }
     },
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
       },
       default : {
         files: {
-          'img/sprite.svg': ['img/sprite_svg/*.svg'],
+          'build/img/sprite.svg': ['build/img/sprite_svg/*.svg'],
         },
       },
     },
