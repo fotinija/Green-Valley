@@ -1,3 +1,21 @@
+var types = document.querySelectorAll('.booking-form-type-cottage__inner label');
+var content = document.querySelectorAll('.description-cottage');
+for (var j = 0; j < content.length; j++) {
+  content[j].style.display= "none";
+} 
+for (var i = 0; i < types.length; i++) {
+  types[i].addEventListener ('click', function () {
+    for (var j = 0; j < content.length; j++) {
+      content[j].style.display= "none";
+    } 
+    if (document.body.clientWidth > 768 ){
+      if (this.firstElementChild.checked) 
+        document.querySelector('.js-'+this.firstElementChild.getAttribute('id')).style.display= "block";
+    }
+  })
+}
+
+
 
 
 $(document).ready(function(){
@@ -13,7 +31,7 @@ $(document).ready(function(){
       .removeClass('relax__tab--active');
     $(this)
       .closest('.relax__tab')
-      .addClass('relax__tabs--active');
+      .addClass('relax__tab--active');
     $(this)
       .closest('.relax')
       .find('.relax__item--active')
@@ -54,6 +72,7 @@ galleryItemIndex,
           items: 5,
           stagePadding: 50,
           loop: true,
+          dots:false,
           responsive: false
         }).find('a').on('click', function(e){
           e.preventDefault();
@@ -74,7 +93,7 @@ galleryItemIndex,
               center: true,
               items: 5,
               stagePadding: 50,
-              loop: true,
+              dots:false,
               responsive: false
             }).find('a').on('click', function(e){
               e.preventDefault();

@@ -28,10 +28,10 @@
       <div class="booking-form-dates">
         <div class="booking-form-dates__inner">
           <label for="date-of-entry">Дата въезда<br>
-            <input type="text" name="date-of-entry-day" placeholder="ДД" size="2" ><input type="text" name="date-of-entry-month" placeholder="ММ" size="2" ><input type="text" name="date-of-entry-year" placeholder="ГГГГ" size="4" >  
+            <input type="text" name="date-of-entry-day" placeholder="ДД" maxlength="2" ><input type="text" name="date-of-entry-month" placeholder="ММ" maxlength="2" ><input type="text" name="date-of-entry-year" placeholder="ГГГГ" maxlength="4" >  
           </label>
           <label for="date-of-departure">Дата выезда<br>
-          <input type="text" name="date-of-departure-date" placeholder="ДД" size="2" ><input type="text" name="date-of-departure-month" placeholder="ММ" size="2" ><input type="text" name="date-of-departure-year" placeholder="ГГГГ" size="4" ></label>
+          <input type="text" name="date-of-departure-date" placeholder="ДД" maxlength="2" ><input type="text" name="date-of-departure-month" placeholder="ММ" maxlength="2" ><input type="text" name="date-of-departure-year" placeholder="ГГГГ" maxlength="4" ></label>
         </div>
       </div>
     </div>
@@ -56,19 +56,27 @@
       <div class="booking-form-step__title">Тип коттеджа</div>
       <div class="booking-form-type-cottage">
         <div class="booking-form-type-cottage__inner">
-          <label for="type-cottage-flagman"><input type="radio" name="type-cottage" id="type-cottage-flagman"><span>Флагман</span></label>
-          <label for="type-cottage-ozernyj"><input type="radio" name="type-cottage" id="type-cottage-ozernyj"><span>Озерный</span></label>
-          <label for="type-cottage-olhovka"><input type="radio" name="type-cottage" id="type-cottage-olhovka"><span>Ольховка</span></label>
-          <label for="type-cottage-portovyj"><input type="radio" name="type-cottage" id="type-cottage-portovyj"><span>Портовый</span></label>
+          <label for="type-cottage-flagman"><input type="radio" name="type-cottage" id="type-cottage-flagman"><span>Флагман</span></label><label for="type-cottage-ozernyj"><input type="radio" name="type-cottage" id="type-cottage-ozernyj"><span>Озерный</span></label><label for="type-cottage-olhovka"><input type="radio" name="type-cottage" id="type-cottage-olhovka"><span>Ольховка</span></label><label for="type-cottage-portovyj"><input type="radio" name="type-cottage" id="type-cottage-portovyj"><span>Портовый</span></label>
         </div>
       </div>
-      <div class="description-cottage hidden-xs">
+      <div class="description-cottage description-cottage--flagman js-type-cottage-flagman">
         <div class="description-cottage__inner">
-          <div class="description-cottage__square"><span>Площадь 100 м<sup>2</sup></span></div>
-          <div class="description-cottage__rooms"><span>3 комнаты</span></div>
-          <div class="description-cottage__beds"><span>5 спальных мест</span></div>
-          <div class="description-cottage__bath"><span>Раздельный санузел</span></div>
-          <div class="description-cottage__wi-fi"><span>Wi-Fi</span></div>
+          <div class="description-cottage__content description-cottage__content--square"><span>Площадь 100 м<sup>2</sup></span></div><div class="description-cottage__content description-cottage__content--rooms"><span>3 комнаты</span></div><div class="description-cottage__content description-cottage__content--beds"><span>5 спальных мест</span></div><div class="description-cottage__content description-cottage__content--bath"><span>Раздельный санузел</span></div><div class="description-cottage__content description-cottage__content--wi-fi"><span>Wi-Fi</span></div>
+        </div>
+      </div>
+      <div class="description-cottage description-cottage--ozernyj js-type-cottage-ozernyj">
+        <div class="description-cottage__inner">
+          <div class="description-cottage__content description-cottage__content--square"><span>Площадь 50 м<sup>2</sup></span></div><div class="description-cottage__content description-cottage__content--rooms"><span>2 комнаты</span></div><div class="description-cottage__content description-cottage__content--beds"><span>2 спальных мест</span></div><div class="description-cottage__content description-cottage__content--bath"><span>Раздельный санузел</span></div><div class="description-cottage__content description-cottage__content--wi-fi"><span>Wi-Fi</span></div>
+        </div>
+      </div>
+      <div class="description-cottage description-cottage--olhovka js-type-cottage-olhovka">
+        <div class="description-cottage__inner">
+          <div class="description-cottage__content description-cottage__content--square"><span>Площадь 200 м<sup>2</sup></span></div><div class="description-cottage__content description-cottage__content--rooms"><span>5 комнаты</span></div><div class="description-cottage__content description-cottage__content--beds"><span>15 спальных мест</span></div><div class="description-cottage__content description-cottage__content--bath"><span>Раздельный санузел</span></div><div class="description-cottage__content description-cottage__content--wi-fi"><span>Wi-Fi</span></div>
+        </div>
+      </div>
+      <div class="description-cottage description-cottage--portovyj js-type-cottage-portovyj">
+        <div class="description-cottage__inner">
+          <div class="description-cottage__content description-cottage__content--square"><span>Площадь 200 м<sup>2</sup></span></div><div class="description-cottage__content description-cottage__content--rooms"><span>4 комнаты</span></div><div class="description-cottage__content description-cottage__content--beds"><span>8 спальных мест</span></div><div class="description-cottage__content description-cottage__content--bath"><span>Раздельный санузел</span></div><div class="description-cottage__content description-cottage__content--wi-fi"><span>Wi-Fi</span></div>
         </div>
       </div>
     </div>
@@ -83,7 +91,7 @@
           <div><input type="text" placeholder="Имя"><span></span></div>
           <div><input type="text" placeholder="Фамилия"><span></span></div>
           <div><input type="text" placeholder="Номер телефона"><span></span><br/>Мы свяжимся с вами в случае необходимости</div>
-          <div><input type="email" placeholder="E-mail"><span></span><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+          <div><input type="text" placeholder="E-mail"><span></span><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
         </div>
       </div>
     </div>
@@ -103,10 +111,10 @@
             <div class="booking-form-payment__now">
               <label><input type="radio" name="payment"><span>Сейчас</span></label>
               <div class="hidden-xs">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
-              <label for="card-number">Номер карты<br><input type="text" name="card-number" id="card-number"></label>
-              <label for="card-cvv">Код CVV<br><input type="text" name="card-cvv" id="card-cvv"></label>
-              <label for="card-fio">Фамилия владельца карты<br><input type="text" name="card-fio" id="card-fio"></label>
-              <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired"></label>
+              <label for="card-number">Номер карты<br><input type="text" name="card-number" id="card-number" placeholder="0000-0000-0000-0000" ></label>
+              <label for="card-cvv">Код CVV<span class="tooltip hidden-xs hidden-sm hidden-md"></span><br><input type="text" name="card-cvv" id="card-cvv" placeholder="123" ></label>
+              <label for="card-fio">Фамилия владельца карты<br><input type="text" name="card-fio" id="card-fio" placeholder="Vladimir Vladimirov" ></label>
+              <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired" placeholder="01/2018" ></label>
             </div>
           </div>
           <div class="booking-form-payment__total">
