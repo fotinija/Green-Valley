@@ -8,16 +8,21 @@
   & label {
     display: inline-block;
     vertical-align: top;
+    color: @gray;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
     position: relative;
     @media (min-width: @screen-sm-min) {
-      border-right: 1px solid @gray--light;
+      
       width: 24%;
       padding: 40px 0;
       margin: 25px 0;
-      &:last-child {
+
+      &:after {
+        border-right: 1px solid @gray--light;
+      }
+      &:last-child:after {
         border-right: none;
       }
     }
@@ -29,24 +34,27 @@
 
   & input[type="radio"] {
     display: none;
-    &:checked + span:after {
-      content: '';
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url('../img/check.png');
-      width: 16px;
-      height: 12px;
-      position: absolute;
-      @media (min-width: @screen-sm-min) {
-        top: 70px;
-        left: 50%;
+    &:checked + span {
+      color: @gray--dark;
+      &:after {
+        content: '';
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../img/check.png');
+        width: 16px;
+        height: 12px;
+        position: absolute;
+        @media (min-width: @screen-sm-min) {
+          top: 70px;
+          left: 50%;
+        }
+        @media (max-width: @screen-xs-max) {
+          top: 19px;
+          left: 25%;
+        }
+        
+        transform: translate(-50%);
       }
-      @media (max-width: @screen-xs-max) {
-        top: 19px;
-        left: 25%;
-      }
-      
-      transform: translate(-50%);
     }
   }
 }

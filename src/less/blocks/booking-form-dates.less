@@ -18,6 +18,16 @@
     padding: 5px;
     margin: 10px 0;
     color: @green;
+    border: 1px solid @gray--light;
+    &::-webkit-input-placeholder {color:@gray;}
+    &::-moz-placeholder          {color:@gray;}
+    &:-moz-placeholder           {color:@gray;}
+    &:-ms-input-placeholder      {color:@gray;}
+    &:focus::-webkit-input-placeholder {color: transparent}
+    &:focus::-moz-placeholder          {color: transparent}
+    &:focus:-moz-placeholder           {color: transparent}
+    &:focus:-ms-input-placeholder      {color: transparent}
+
   }
 
   & label {

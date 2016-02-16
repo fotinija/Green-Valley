@@ -11,6 +11,8 @@
 
   &__inner {
     .make-row();
+    align-items: center;
+    vertical-align: middle;
   }
   
   &__address {
@@ -23,6 +25,22 @@
     .make-lg-column(4);
     .make-sm-column(4);
     text-align: center;
+
+    & img {
+      padding-bottom: 12px;
+    }
+    
+    & svg {
+      fill:@green;
+    }
+
+    & a {
+      padding-right: 20px;
+    }
+
+    & a:last-child {
+      padding-right: 0;
+    }
   }
 
   &__contacts {
@@ -31,6 +49,8 @@
     .make-sm-column-offset(1);
     .make-sm-column(3);
     text-align: right;
+
+
   }
 
   

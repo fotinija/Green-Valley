@@ -657,6 +657,11 @@ p {
 	margin-left: -15px;
 	margin-right: -15px;
 	font-size: 0;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	-ms-grid-row-align: center;
+	align-items: center;
+	vertical-align: middle;
 }
 
 .flexbox .page-footer__inner {
@@ -691,6 +696,22 @@ p {
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: center;
+}
+
+.page-footer__links img {
+	padding-bottom: 12px;
+}
+
+.page-footer__links svg {
+	fill: #0ab89d;
+}
+
+.page-footer__links a {
+	padding-right: 20px;
+}
+
+.page-footer__links a:last-child {
+	padding-right: 0;
 }
 
 .page-footer__contacts {
@@ -893,12 +914,6 @@ p {
 
 .gallery__main {
 	height: 497px;
-	overflow: hidden;
-	text-align: center;
-}
-
-.gallery__thumbs div {
-	height: 113px;
 	overflow: hidden;
 	text-align: center;
 }
@@ -1686,6 +1701,39 @@ p {
 	padding: 5px;
 	margin: 10px 0;
 	color: #0ab89d;
+	border: 1px solid #ebebeb;
+}
+
+.booking-form-dates input[type="text"]::-webkit-input-placeholder {
+	color: #979696;
+}
+
+.booking-form-dates input[type="text"]::-moz-placeholder {
+	color: #979696;
+}
+
+.booking-form-dates input[type="text"]:-moz-placeholder {
+	color: #979696;
+}
+
+.booking-form-dates input[type="text"]:-ms-input-placeholder {
+	color: #979696;
+}
+
+.booking-form-dates input[type="text"]:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.booking-form-dates input[type="text"]:focus::-moz-placeholder {
+	color: transparent;
+}
+
+.booking-form-dates input[type="text"]:focus:-moz-placeholder {
+	color: transparent;
+}
+
+.booking-form-dates input[type="text"]:focus:-ms-input-placeholder {
+	color: transparent;
 }
 
 .booking-form-dates label {
@@ -1810,6 +1858,7 @@ p {
 .booking-form-type-cottage label {
 	display: inline-block;
 	vertical-align: top;
+	color: #979696;
 	text-transform: uppercase;
 	text-align: center;
 	cursor: pointer;
@@ -1818,6 +1867,10 @@ p {
 
 .booking-form-type-cottage input[type="radio"] {
 	display: none;
+}
+
+.booking-form-type-cottage input[type="radio"]:checked + span {
+	color: #4c4c4c;
 }
 
 .booking-form-type-cottage input[type="radio"]:checked + span:after {
@@ -1980,6 +2033,7 @@ p {
 	margin-left: -15px;
 	margin-right: -15px;
 	font-size: 0;
+	color: #4c4c4c;
 }
 
 .flexbox .booking-form-payment {
@@ -2001,9 +2055,6 @@ p {
 	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
 }
 
 .booking-form-payment label {
@@ -2032,7 +2083,6 @@ p {
 
 .booking-form-payment__now {
 	padding: 0 15px;
-	margin-bottom: 25px;
 	background-color: #fff;
 }
 
@@ -2137,18 +2187,6 @@ p {
 	padding: 30px;
 	text-align: center;
 	padding: 0 0 40px;
-}
-
-.booking-form-payment__methods {
-	-webkit-order: 2;
-	-ms-flex-order: 2;
-	order: 2;
-}
-
-.booking-form-payment__total {
-	-webkit-order: 1;
-	-ms-flex-order: 1;
-	order: 1;
 }
 
 }
@@ -2474,13 +2512,16 @@ td.visible-md {
 }
 
 .booking-form-type-cottage label {
-	border-right: 1px solid #ebebeb;
 	width: 24%;
 	padding: 40px 0;
 	margin: 25px 0;
 }
 
-.booking-form-type-cottage label:last-child {
+.booking-form-type-cottage label:after {
+	border-right: 1px solid #ebebeb;
+}
+
+.booking-form-type-cottage label:last-child:after {
 	border-right: none;
 }
 
@@ -2497,16 +2538,35 @@ td.visible-md {
 	margin-right: 30px;
 }
 
+.booking-form-payment__inner {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.booking-form-payment__methods {
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+}
+
 .booking-form-payment__now label {
 	width: 47%;
 }
 
 .booking-form-payment__now label:nth-child(2n+1) {
-	margin-right: 30px;
+	margin-right: 15px;
 }
 
 .booking-form-payment__now label:first-child {
 	margin-right: 0;
+}
+
+.booking-form-payment__total {
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	margin-right: 20px;
 }
 
 }
@@ -2822,7 +2882,6 @@ td.visible-lg {
 @media (max-width: 1199px) {
 
 .main-nav {
-	display: none;
 	width: 100%;
 }
 
@@ -2949,6 +3008,10 @@ td.visible-xs {
 
 .booking-form-personal__inner div {
 	width: 100%;
+}
+
+.booking-form-payment__now {
+	margin-bottom: 25px;
 }
 
 .booking-form-payment__now label {

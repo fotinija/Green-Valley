@@ -24,8 +24,8 @@ $(document).ready(function(){
     });
   });
 
-  var owl = $('.gallery__thumbs'),
-  galleryItemIndex;
+var owl = $('.gallery__thumbs'),
+galleryItemIndex,
   // owl.owlCarousel({
   //   center: true,
   //   items: 5,
@@ -39,24 +39,14 @@ $(document).ready(function(){
   //   console.log(galleryItemIndex);
   //   owl.trigger('to.owl.carousel', galleryItemIndex);
   // });
-
-  // if ( $(window).width() >= 768 ) {
-  //   var owlActive = owl.owlCarousel({
-  //   center: true,
-  //   items: 5,
-  //   stagePadding: 50,
-  //   loop: true,
-  //   responsive:false
-  // });
-  // } else {
-  //   owl.addClass('off');
-  // }
-
-  $('#destroy').click(function(e){
-    e.preventDefault();
-    owl.trigger('destroy.owl.carousel');
-    owl.find('.owl-stage-outer').hide();
-  });
+        owlOptions = {
+          center: true,
+          items: 5,
+          stagePadding: 50,
+          loop: true,
+          //responsive: false,
+          dots:false,
+        };
 
   if ( $(window).width() >= 768 ) {
         var owlActive = owl.owlCarousel({
@@ -104,6 +94,7 @@ $(document).ready(function(){
       }
     });
 
+
   $('.review__carousel').owlCarousel({
     loop:true,
     nav:true,
@@ -111,7 +102,7 @@ $(document).ready(function(){
     dots: false,
     items:2,
     itemsTabletSmall: false,
-    responsive:false
+    //responsive:false
   })
   
   $('.offers__slides').owlCarousel({
