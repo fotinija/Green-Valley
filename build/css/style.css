@@ -500,6 +500,48 @@ p {
 	padding: 0;
 }
 
+input[type="text"] {
+	color: #0ab89d;
+	border: 1px solid #ebebeb;
+	text-transform: uppercase;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+	color: #979696;
+	text-transform: uppercase;
+}
+
+input[type="text"]::-moz-placeholder {
+	color: #979696;
+	text-transform: uppercase;
+}
+
+input[type="text"]:-moz-placeholder {
+	color: #979696;
+	text-transform: uppercase;
+}
+
+input[type="text"]:-ms-input-placeholder {
+	color: #979696;
+	text-transform: uppercase;
+}
+
+input[type="text"]:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input[type="text"]:focus::-moz-placeholder {
+	color: transparent;
+}
+
+input[type="text"]:focus:-moz-placeholder {
+	color: transparent;
+}
+
+input[type="text"]:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
 .page-header {
 	font-family: "fira_sansmedium", Helvetica, Arial;
 	border-bottom: 1px solid #ebebeb;
@@ -767,12 +809,8 @@ p {
 }
 
 .relax {
-	background-image: url('../img/relax-bg.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
 	text-align: center;
-	padding: 50px 0;
+	border-bottom: 80px;
 }
 
 .relax__container {
@@ -781,6 +819,10 @@ p {
 	padding-left: 15px;
 	padding-right: 15px;
 	overflow: hidden;
+	background-image: url('../img/relax-bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 
 .relax__inner {
@@ -877,6 +919,7 @@ p {
 
 .relax__tab a {
 	color: #191919;
+	text-transform: uppercase;
 }
 
 .relax__tab--active a {
@@ -1704,40 +1747,19 @@ p {
 .booking-form-dates input[type="text"] {
 	padding: 5px;
 	margin: 10px 0;
-	color: #0ab89d;
-	border: 1px solid #ebebeb;
+	width: 40px;
+	height: 27px;
+	text-align: center;
 }
 
-.booking-form-dates input[type="text"]::-webkit-input-placeholder {
-	color: #979696;
+.booking-form-dates input[type="text"]:last-child {
+	width: 52px;
 }
 
-.booking-form-dates input[type="text"]::-moz-placeholder {
-	color: #979696;
-}
-
-.booking-form-dates input[type="text"]:-moz-placeholder {
-	color: #979696;
-}
-
-.booking-form-dates input[type="text"]:-ms-input-placeholder {
-	color: #979696;
-}
-
-.booking-form-dates input[type="text"]:focus::-webkit-input-placeholder {
-	color: transparent;
-}
-
-.booking-form-dates input[type="text"]:focus::-moz-placeholder {
-	color: transparent;
-}
-
-.booking-form-dates input[type="text"]:focus:-moz-placeholder {
-	color: transparent;
-}
-
-.booking-form-dates input[type="text"]:focus:-ms-input-placeholder {
-	color: transparent;
+.booking-form-dates input[name="date-of-entry-month"],
+.booking-form-dates input[name="date-of-departure-month"] {
+	border-right: 0;
+	border-left: 0;
 }
 
 .booking-form-dates label {
@@ -1857,6 +1879,7 @@ p {
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #fff;
+	border: 1px solid #ebebeb;
 }
 
 .booking-form-type-cottage label {
@@ -1867,6 +1890,7 @@ p {
 	text-align: center;
 	cursor: pointer;
 	position: relative;
+	font-weight: bold;
 }
 
 .booking-form-type-cottage input[type="radio"] {
@@ -1895,6 +1919,7 @@ p {
 	font-size: 0;
 	margin-top: 20px;
 	position: relative;
+	display: none;
 }
 
 .flexbox .description-cottage {
@@ -1912,8 +1937,24 @@ p {
 	border: 10px solid transparent;
 	border-bottom: 16px solid #fff;
 	position: absolute;
-	left: 23.66666667%;
 	top: -25px;
+	z-index: 10;
+}
+
+.description-cottage--flagman:before {
+	left: 24.66666667%;
+}
+
+.description-cottage--ozernyj:before {
+	left: 41.33333333%;
+}
+
+.description-cottage--olhovka:before {
+	left: 57%;
+}
+
+.description-cottage--portovyj:before {
+	left: 72.66666667%;
 }
 
 .description-cottage__inner {
@@ -1927,27 +1968,25 @@ p {
 	padding-right: 15px;
 	padding: 0;
 	background-color: #fff;
+	border: 1px solid #ebebeb;
 }
 
-.description-cottage__inner div {
+.description-cottage__content {
 	display: inline-block;
+	vertical-align: top;
 	text-align: center;
 	cursor: pointer;
 	padding: 85px 0 25px;
-	width: 19%;
-	border-right: 1px solid #ebebeb;
+	width: 20%;
 	position: relative;
 	text-transform: uppercase;
 }
 
-.description-cottage__inner div:last-child {
-	border-right: none;
-}
-
-.description-cottage__inner span:before {
+.description-cottage__content span:before {
 	content: '';
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center bottom;
 	width: 80px;
 	height: 43px;
 	position: absolute;
@@ -1958,23 +1997,23 @@ p {
 	opacity: 1;
 }
 
-.description-cottage__square span:before {
+.description-cottage__content--square span:before {
 	background-image: url('../img/squad-rule.png');
 }
 
-.description-cottage__rooms span:before {
+.description-cottage__content--rooms span:before {
 	background-image: url('../img/door.png');
 }
 
-.description-cottage__beds span:before {
+.description-cottage__content--beds span:before {
 	background-image: url('../img/bed.png');
 }
 
-.description-cottage__bath span:before {
+.description-cottage__content--bath span:before {
 	background-image: url('../img/bath.png');
 }
 
-.description-cottage__wi-fi span:before {
+.description-cottage__content--wi-fi span:before {
 	background-image: url('../img/wi-fi.png');
 }
 
@@ -2016,8 +2055,8 @@ p {
 }
 
 .booking-form-personal input {
-	height: 48px;
-	line-height: 48px;
+	height: 40px;
+	line-height: 40px;
 	width: 100%;
 	border: 1px solid #ebebeb;
 	padding-left: 25px;
@@ -2064,17 +2103,25 @@ p {
 .booking-form-payment label {
 	text-transform: uppercase;
 	cursor: pointer;
+	position: relative;
 }
 
 .booking-form-payment__arrive {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	background-color: #fff;
 	margin-bottom: 25px;
 	padding: 0 15px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .booking-form-payment__arrive label {
-	width: 163px;
+	width: 150px;
 	display: inline-block;
+	vertical-align: top;
 	padding-left: 40px;
 	padding-top: 25px;
 	padding-bottom: 15px;
@@ -2083,15 +2130,25 @@ p {
 
 .booking-form-payment__arrive div {
 	display: inline-block;
+	vertical-align: top;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	width: 250px;
 }
 
 .booking-form-payment__now {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 	padding: 0 15px;
 	background-color: #fff;
 }
 
 .booking-form-payment__now label:first-child {
-	width: 163px;
+	width: 150px;
 	display: inline-block;
 	padding-left: 40px;
 	padding-top: 25px;
@@ -2102,20 +2159,23 @@ p {
 
 .booking-form-payment__now label {
 	display: inline-block;
+	vertical-align: top;
 	padding-bottom: 15px;
 	line-height: 30px;
 }
 
 .booking-form-payment__now div {
 	display: inline-block;
+	vertical-align: top;
+	width: 250px;
+	padding-top: 20px;
+	padding-bottom: 15px;
 }
 
 .booking-form-payment__now input[type="text"] {
-	height: 48px;
-	line-height: 48px;
+	height: 40px;
+	line-height: 40px;
 	width: 100%;
-	border: 1px solid #ebebeb;
-	color: #979696;
 	text-align: center;
 	padding: 0 15px;
 }
@@ -2127,7 +2187,7 @@ p {
 }
 
 .booking-form-payment__total-title {
-	padding-top: 25px;
+	padding-top: 20px;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -2173,6 +2233,16 @@ p {
 
 .booking-form-payment .btn {
 	margin-top: 50px;
+}
+
+.tooltip {
+	background-image: url('../img/tip.png');
+	width: 16px;
+	height: 17px;
+	position: absolute;
+	right: 0;
+	top: 8px;
+	z-index: 10;
 }
 
 @media (min-width: 320px) {
@@ -2516,16 +2586,13 @@ td.visible-md {
 }
 
 .booking-form-type-cottage label {
-	width: 24%;
+	width: 25%;
 	padding: 40px 0;
 	margin: 25px 0;
-}
-
-.booking-form-type-cottage label:after {
 	border-right: 1px solid #ebebeb;
 }
 
-.booking-form-type-cottage label:last-child:after {
+.booking-form-type-cottage label:last-child {
 	border-right: none;
 }
 
@@ -2552,6 +2619,7 @@ td.visible-md {
 	-webkit-order: 2;
 	-ms-flex-order: 2;
 	order: 2;
+	width: 62.5%;
 }
 
 .booking-form-payment__now label {
@@ -2571,6 +2639,7 @@ td.visible-md {
 	-ms-flex-order: 1;
 	order: 1;
 	margin-right: 20px;
+	width: 37.5%;
 }
 
 }
@@ -2667,15 +2736,7 @@ td.visible-lg {
 }
 
 .relax__wrapper-text {
-	margin-left: 25%;
-}
-
-.relax__wrapper-text {
 	width: 50%;
-}
-
-.relax__features {
-	margin-left: 16.66666667%;
 }
 
 .relax__features {

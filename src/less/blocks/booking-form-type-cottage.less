@@ -1,10 +1,13 @@
 .booking-form-type-cottage {
-  .make-row();
+  .make-row();  
+
   &__inner {
     .make-lg-column-offset(2);
     .make-lg-column(8);
     background-color: #fff;
+    border: 1px solid @gray--light;
   }
+
   & label {
     display: inline-block;
     vertical-align: top;
@@ -13,19 +16,19 @@
     text-align: center;
     cursor: pointer;
     position: relative;
-    @media (min-width: @screen-sm-min) {
-      
-      width: 24%;
+    font-weight: bold;
+
+    @media (min-width: @screen-sm-min) {      
+      width: 25%;
       padding: 40px 0;
       margin: 25px 0;
+      border-right: 1px solid @gray--light;
 
-      &:after {
-        border-right: 1px solid @gray--light;
-      }
-      &:last-child:after {
+      &:last-child {
         border-right: none;
       }
     }
+
     @media (max-width: @screen-xs-max) {
       width: 100%;
       padding: 15px 0;
@@ -34,8 +37,10 @@
 
   & input[type="radio"] {
     display: none;
+
     &:checked + span {
       color: @gray--dark;
+
       &:after {
         content: '';
         background-size: contain;
@@ -44,16 +49,18 @@
         width: 16px;
         height: 12px;
         position: absolute;
+        transform: translate(-50%);
+
         @media (min-width: @screen-sm-min) {
           top: 70px;
           left: 50%;
         }
+
         @media (max-width: @screen-xs-max) {
           top: 19px;
           left: 25%;
-        }
-        
-        transform: translate(-50%);
+        }  
+      
       }
     }
   }
