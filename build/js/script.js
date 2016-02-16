@@ -54,6 +54,7 @@ galleryItemIndex,
           items: 5,
           stagePadding: 50,
           loop: true,
+          dots:false,
           responsive: false
         }).find('a').on('click', function(e){
           e.preventDefault();
@@ -75,6 +76,7 @@ galleryItemIndex,
               items: 5,
               stagePadding: 50,
               loop: true,
+              dots:false,
               responsive: false
             }).find('a').on('click', function(e){
               e.preventDefault();

@@ -904,6 +904,10 @@ p {
 	left: 25%;
 }
 
+.gallery {
+	margin-bottom: 40px;
+}
+
 .gallery__container {
 	margin-right: auto;
 	margin-left: auto;
