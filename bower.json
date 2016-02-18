@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "description": "",
+  "main": "",
+  "authors": [
+    "fotinija <4tinija@gmail.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/fotinija/Green-Valley",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "owl.carousel": "https://github.com/smashingboxes/OwlCarousel2.git#^2.0.0-beta.3",
+    "slick-carousel": "^1.5.9"
+  }
+}
