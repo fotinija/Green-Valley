@@ -1127,6 +1127,17 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	padding-top: 35px;
 }
 
+.location__map {
+	position: relative;
+	min-height: 1px;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	font-size: 14px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 .location__bus {
 	position: relative;
 	min-height: 1px;
@@ -1434,10 +1445,10 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 
 .btn {
 	display: inline-block;
-	text-align: center;
 	color: #fff;
 	background-color: #ff7435;
-	padding: 0 25px;
+	text-align: center;
+	width: 180px;
 	border-radius: 25px;
 	text-decoration: none;
 	font-size: 12px;
@@ -1449,7 +1460,9 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active,
+.btn:focus {
 	background-color: #e85715;
 	text-decoration: none;
 	color: #fff;
@@ -1459,7 +1472,9 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	background-color: #0ab89d;
 }
 
-.btn--green:hover {
+.btn--green:hover,
+.btn--green:active,
+.btn--green:focus {
 	background-color: #079b84;
 }
 
@@ -1468,7 +1483,9 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	border: 1px solid #fff;
 }
 
-.btn--bordered:hover {
+.btn--bordered:hover,
+.btn--bordered:active,
+.btn--bordered:focus {
 	background: #fff;
 	color: #0ab89d;
 }
@@ -1490,6 +1507,13 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 .btn--wide {
 	width: 100%;
 	border-radius: 0;
+}
+
+.btn--icon-calendar {
+	background-image: url('../img/icon-calendar.png');
+	background-repeat: no-repeat;
+	background-position: 20px 50%;
+	padding-left: 10px;
 }
 
 .room-price {
@@ -2728,6 +2752,10 @@ td.visible-lg {
 }
 
 .location__title {
+	width: 100%;
+}
+
+.location__map {
 	width: 100%;
 }
 

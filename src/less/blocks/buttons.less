@@ -3,7 +3,8 @@
     text-align: center;
     color: @text-color-buttons;
     background-color: @orange;
-    padding: 0 25px;
+    text-align: center;
+    width: 180px;
     border-radius: @border-radius;
     text-decoration: none;
     font-size: 12px;
@@ -14,7 +15,7 @@
     border: none;
     cursor: pointer;
 
-    &:hover{
+    &:hover, &:active, &:focus{
         background-color: @orange--dark;
         text-decoration: none;
         color: @text-color-buttons;
@@ -23,7 +24,7 @@
     &--green{
         background-color: @green;
 
-        &:hover{
+        &:hover, &:active, &:focus{
           background-color: @green--dark;
         }
     }
@@ -31,7 +32,7 @@
     &--bordered{
         background-color: transparent;
         border:1px solid #fff;
-        &:hover {
+        &:hover, &:active, &:focus {
           background: #fff;
           color: @green;
         }
@@ -53,5 +54,12 @@
     &--wide {
       width: 100%;
       border-radius: 0;
+    }
+
+    &--icon-calendar{
+      background-image: url('../img/icon-calendar.png');
+      background-repeat: no-repeat;
+      background-position: 20px 50%;
+      padding-left: 10px;
     }
 }
