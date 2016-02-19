@@ -27,6 +27,12 @@
 
   &__map {
     .make-lg-column(12);
+    margin-bottom: 35px;
+
+    & iframe{
+      width: 100%;
+      height: 400px;
+    } 
   }
 
   &__bus {
@@ -42,6 +48,9 @@
       height: 29px;
       transform: translate(-50%);
     }
+    @media(max-width: @screen-xs-max){
+      text-align: center;
+    }
   }
 
   &__train {
@@ -56,6 +65,9 @@
       width: 58px;
       height: 26px;
       transform: translate(-50%);
+    }
+     @media(max-width: @screen-xs-max){
+      text-align: center;
     }
   }
 

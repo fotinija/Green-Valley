@@ -1136,6 +1136,12 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
+	margin-bottom: 35px;
+}
+
+.location__map iframe {
+	width: 100%;
+	height: 400px;
 }
 
 .location__bus {
@@ -3022,6 +3028,14 @@ td.visible-xs {
 
 .offers__slide-inner {
 	left: 0;
+}
+
+.location__bus {
+	text-align: center;
+}
+
+.location__train {
+	text-align: center;
 }
 
 .other-rooms__inner {
