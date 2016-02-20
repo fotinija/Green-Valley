@@ -749,7 +749,7 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 
 .relax {
 	text-align: center;
-	border-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 .relax__container {
@@ -904,6 +904,10 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	text-align: center;
 }
 
+.gallery .owl-controls {
+	display: none;
+}
+
 .review {
 	background-image: url('../img/review-bg.png');
 	background-repeat: no-repeat;
@@ -949,10 +953,6 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	text-align: center;
 	font-size: 26px;
 	margin: 50px 0 0;
-}
-
-.review__carousel {
-	padding: 0 30px;
 }
 
 .review__arrow-left {
@@ -2411,6 +2411,10 @@ td.visible-md {
 	width: 750px;
 }
 
+.review__carousel {
+	padding: 0 30px;
+}
+
 .review__slide {
 	width: 50%;
 }
@@ -3026,6 +3030,10 @@ td.visible-xs {
 	background-color: #fff;
 }
 
+.review__container {
+	padding: 0;
+}
+
 .offers__slide-inner {
 	left: 0;
 }
@@ -3036,6 +3044,7 @@ td.visible-xs {
 
 .location__train {
 	text-align: center;
+	margin-top: 35px;
 }
 
 .other-rooms__inner {

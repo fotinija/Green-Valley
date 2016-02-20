@@ -48,7 +48,7 @@ $(document).ready(function(){
     center: true,
     items: 5,
     stagePadding: 50,
-    //loop: true,
+    loop: true,
     responsive: false
   }).find('a').on('click', function(e){
     e.preventDefault();
