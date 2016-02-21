@@ -1,5 +1,5 @@
 .page-header {
-	font-family: @font-family;
+  font-family: @font-family;
   border-bottom: 1px solid @gray--light;
 
   &__container {
@@ -7,32 +7,30 @@
   }
 
   overflow: hidden;
-	//text-align:center;
+  //text-align:center;
 
   height: 90px;
 
-	&__inner {
-		//margin: 0 auto;
-		//width: 1200px;
+  &__inner {
     .make-row();
-	}
+  }
 
-	&__contacts {
-		.make-lg-column(3);
+  &__contacts {
+    .make-lg-column(3);
     .make-md-column(3);
     padding-top: 25px;
     & strong {
       font-size: 18px;
       font-family: @font-family--sans;
     }
-	}
+  }
 
-	&__btn {
-		.make-lg-column(2);
+  &__btn {
+    .make-lg-column(2);
     .make-md-column(2);
     text-align: right;
     padding-top: 26px;
-	}
+  }
 
   &__logo{
     .make-lg-column(2);

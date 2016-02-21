@@ -88,10 +88,10 @@
       <div class="booking-form-step__title">Персональная информация</div>
       <div class="booking-form-personal">
         <div class="booking-form-personal__inner">
-          <div><input type="text" placeholder="Имя"><span></span></div>
-          <div><input type="text" placeholder="Фамилия"><span></span></div>
-          <div><input type="text" placeholder="Номер телефона"><span></span><br/>Мы свяжимся с вами в случае необходимости</div>
-          <div><input type="text" placeholder="E-mail"><span></span><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+          <div><input type="text" placeholder="Имя" name="name"><span></span></div>
+          <div><input type="text" placeholder="Фамилия" name="sirname"><span></span></div>
+          <div><input type="text" placeholder="Номер телефона" name="phone"><span></span><br/>Мы свяжимся с вами в случае необходимости</div>
+          <div><input type="text" placeholder="E-mail" name="email"><span></span><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@
               <div class="hidden-xs">Вы можете произвести оплату по факту заселения.</div>
             </div>
             <div class="booking-form-payment__now">
-              <label><input type="radio" name="payment"><span>Сейчас</span></label>
+              <label><input type="radio" name="payment" checked><span>Сейчас</span></label>
               <div class="hidden-xs">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
               <label for="card-number">Номер карты<br><input type="text" name="card-number" id="card-number" placeholder="0000-0000-0000-0000" ></label>
               <label for="card-cvv">Код CVV<span class="tooltip hidden-xs hidden-sm hidden-md"></span><br><input type="text" name="card-cvv" id="card-cvv" placeholder="123" ></label>

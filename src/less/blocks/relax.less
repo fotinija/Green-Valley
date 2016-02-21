@@ -18,6 +18,7 @@
 
   &__item {
     display: none;
+
     &--active {
       display: block;
     }
@@ -38,10 +39,10 @@
   }
   
   &__features {
-    //.make-lg-column-offset(2);
     .make-lg-column(8);
     .make-sm-column(10); 
     .make-xs-column(12);
+
     & li {
       display: inline-block;
       vertical-align: top;
@@ -67,6 +68,7 @@
     vertical-align: middle;
     position: relative;
     margin-right: 20px;
+
     a {
       color: @text-color;
       text-transform: uppercase;
@@ -75,9 +77,11 @@
     &--active a{
        color: @orange;
     }
+    
     &--active, & a:hover, & a:active, & a:focus {
       text-decoration: none;
       color: @orange;
+
       &::after {
         background-color: @orange;
         width: 50%;

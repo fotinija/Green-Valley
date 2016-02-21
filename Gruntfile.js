@@ -81,7 +81,10 @@ module.exports = function(grunt) {
     concat: {
       start: {
         src: [
-          // 'src/js/plugin.js',
+          //'bower_components/jquery/dist/jquery.min.js',
+          //'bower_components/owl.carousel/src/js/owl.carousel.js',
+          //'bower_components/slick-carousel/slick/slick.js',
+          'src/js/script-svg.js',
           'src/js/script.js'
         ],
         dest: 'build/js/script.js'
@@ -109,7 +112,7 @@ module.exports = function(grunt) {
         dest: 'build/img/',
       },
 
-      // копируем js
+      // копируем шрифты
       js: {
         expand: true,
         // откуда
@@ -119,6 +122,7 @@ module.exports = function(grunt) {
         // куда
         dest: 'build/js/',
       },
+
     },
 
     // обрабатываем разметку (инклуды)

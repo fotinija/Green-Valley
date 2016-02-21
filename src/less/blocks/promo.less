@@ -20,42 +20,45 @@
   }
 
   &__slide-inner {
-    //.make-row();
   }
 
   & span {
     background-color: #fff;
+    padding: 0 10px;
   }
+
   &__slide-title {
     padding: 10px;
     font-size: 36px;
     margin-top: 70px;
+    
     @media (min-width: @screen-xs-min) {
       width: 100%;  
     }
+
     @media (max-width: @screen-xs-max) {
       font-size: 18px; 
       width: 100%;
       background-color: #fff;
     } 
+
     @media (min-width: @screen-sm-min) {
       margin-bottom: 20px;  
     } 
+
     @media (min-width: @screen-lg-min) {
       width: 535px;  
     } 
   }
 
   &__slide-description {
-    // .make-lg-column(6);
-    // .make-xs-column(6);
-    
-    width: 415px;
     padding: 10px;
     font-size: 18px;
+
     & span {
       background-color: #fff;
     }
+
     @media (max-width: @screen-xs-max) {
       width: 100%; 
       background-color: #fff; 

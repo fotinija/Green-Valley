@@ -28,15 +28,17 @@
     line-height: 40px;
     width: 100%;
     border: 1px solid @gray--light;
-    padding-left: 25px;
-    &.valid:before {
-      content: '';
+    padding-left: 40px;
+    position: relative;
+    &.valid {
       background-image: url('../img/check.png');
-      width: 16px;
-      height: 12px;
-      position: absolute;
-      left: 0;
-      top: 28px;
+      background-repeat: no-repeat;
+      background-position: 10px 13px;
+    }
+    &.error {
+      background-image: url('../img/error.png');
+      background-repeat: no-repeat;
+      background-position: 10px 13px;
     }
   }
   

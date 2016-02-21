@@ -10,15 +10,24 @@
     height: 497px;
     overflow: hidden;
     text-align: center;
+
+    & div.slick-slide {
+      text-align: center;
+      padding-top: -50px;
+      & img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
   }
 
   & .owl-controls{
     display: none;
   }
 
-  // &__thumbs div {
-  //   height: 113px;
-  //   overflow: hidden;
-  //   text-align: center;
-  // }
+  &__thumbs div {
+    height: 113px;
+    overflow: hidden;
+    text-align: center;
+  }
 }

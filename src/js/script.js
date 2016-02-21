@@ -15,7 +15,32 @@ for (var i = 0; i < types.length; i++) {
   })
 }
 
-
+var inputs = document.querySelectorAll('.booking-form-personal input[type="text"');
+var regExprName = /[a-zA-Zа-яА-Я]{3,20}/;
+var regExprPhone = /[0-9()+]{3,20}/;
+var regExprEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+var valid = false;
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener ('blur', function () {
+    var inputName = this.getAttribute('name');
+    if (inputName == "name" || inputName == "sirname") {
+      valid = regExprName.test(this.value);
+    }
+    if (inputName == "phone") {
+      valid = regExprPhone.test(this.value);
+    }
+    if (inputName == "email") {
+      valid = regExprEmail.test(this.value);
+    }
+    if (valid) {
+      this.classList.remove('error');
+      this.classList.add('valid');
+    } else {
+      this.classList.remove('valid');
+      this.classList.add('error');
+    }
+  })
+}
 
 
 $(document).ready(function(){
@@ -42,23 +67,23 @@ $(document).ready(function(){
     });
   });
 
-  var owl = $('.gallery__thumbs'),
-  galleryItemIndex;
-  owl.owlCarousel({
-    center: true,
-    items: 5,
-    stagePadding: 50,
-    loop: true,
-    responsive: false
-  }).find('a').on('click', function(e){
-    e.preventDefault();
-    $(this).closest('.gallery').find('.gallery__main-img').attr('src', $(this).attr('href'));
-    galleryItemIndex = $(this).closest('.owl-item').index();
-    console.log(galleryItemIndex);
-    owl.trigger('to.owl.carousel', galleryItemIndex);
+  $('.gallery__main').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    cssEase: 'ease-out',
+    asNavFor: '.gallery__thumbs'
   });
-        
-
+  
+  $('.gallery__thumbs').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.gallery__main',
+    arrows: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
 
   var owlReview = $('.review__carousel'),
   owlReviewOptions = {
@@ -95,7 +120,7 @@ $(document).ready(function(){
     }
   });
 
- 
+
   $('.offers__slides').owlCarousel({
     loop:true,
     items:1
@@ -135,8 +160,6 @@ $(document).ready(function(){
       }
     }
   });
-
-
 
   var owlRooms = $('.other-rooms__list'),
   owlRoomsOptions = {
