@@ -828,11 +828,6 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	overflow: hidden;
 }
 
-.promo span {
-	background-color: #fff;
-	padding: 0 10px;
-}
-
 .promo__slide-title {
 	padding: 10px;
 	font-size: 36px;
@@ -945,6 +940,7 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	font-size: 14px;
 	padding-left: 15px;
 	padding-right: 15px;
+	padding: 0;
 	text-align: center;
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -1626,11 +1622,14 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	padding: 0;
 	border-radius: 0;
 	color: #191919;
+	line-height: 30px;
 	border-bottom: 2px dashed #191919;
 	width: auto;
 }
 
-.btn--underline:hover {
+.btn--underline:hover,
+.btn--underline:active,
+.btn--underline:focus {
 	background: none;
 	color: #191919;
 	border-bottom: 2px dashed transparent;
@@ -2474,6 +2473,11 @@ td.visible-md {
 	margin-bottom: 20px;
 }
 
+.promo span {
+	background-color: #fff;
+	padding: 0 10px;
+}
+
 .relax__container {
 	width: 750px;
 }
@@ -3159,6 +3163,10 @@ td.visible-xs {
 .promo__slide-description {
 	width: 100%;
 	background-color: #fff;
+}
+
+.gallery__main {
+	height: 260px;
 }
 
 .review__container {
