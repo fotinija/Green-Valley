@@ -76,6 +76,8 @@ var inputs = document.querySelectorAll('.booking-form-personal input[type="text"
 var regExprName = /[a-zA-Zа-яА-Я]{3,20}/;
 var regExprPhone = /[0-9()+]{3,20}/;
 var regExprEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+var regExprTwoInt = /[0-9]{2}/;
+var regExprFourInt = /[0-9()+]{4}/;
 var valid = false;
 for (var i = 0; i < inputs.length; i++) {
   inputs[i].addEventListener ('blur', function () {
@@ -97,6 +99,83 @@ for (var i = 0; i < inputs.length; i++) {
       this.classList.add('error');
     }
   })
+}
+
+var form = document.querySelector('.booking-form');
+if (form){
+  form.addEventListener ('submit', function (e) {
+    e.preventDefault();
+    var inputsAll = document.querySelectorAll('.booking-form input');
+    for (var i = 0; i < inputsAll.length; i++) {
+      var inputName = inputsAll[i].getAttribute('name');
+      var inputType = inputsAll[i].getAttribute('type');
+      if (inputType == 'text') {
+        if (inputName == 'dateOfEntryDay' && !regExprTwoInt.test(inputsAll[i].value)) {
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'dateOfEntryDay\');">дату приезда</span></p>';
+          break;
+        }
+        if (inputName == 'dateOfEntryMonth' && !regExprTwoInt.test(inputsAll[i].value)) {
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'dateOfEntryDay\');">дату приезда</span></p>';
+          break;
+        }
+        if (inputName == 'dateOfEntryYear' && !regExprFourInt.test(inputsAll[i].value)) {
+         document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'dateOfEntryDay\');">дату приезда</span></p>';
+          break;
+        }
+        if (inputName == 'dateOfDepartureDate' && !regExprTwoInt.test(inputsAll[i].value)) {
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'dateOfDepartureDate\');">дату выезда</span></p>';
+          break;
+        }
+        if (inputName == 'dateOfDepartureMonth' && !regExprTwoInt.test(inputsAll[i].value)) {
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'dateOfDepartureDate\');">дату выезда</span></p>';
+          break;
+        }
+        if (inputName == 'dateOfDepartureYear' && !regExprFourInt.test(inputsAll[i].value)) {
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'dateOfDepartureDate\');">дату выезда</span></p>';
+          break;
+        }
+        
+        if (inputName == 'name' && !regExprName.test(inputsAll[i].value)) {
+          inputsAll[i].classList.add('error');
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'name\');">имя</span></p>';
+          break;
+        }
+        if (inputName == 'sirname' && !regExprName.test(inputsAll[i].value)) {
+          inputsAll[i].classList.add('error');
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'sirname\');">фамилию</span></p>';
+          break;
+        }
+        if (inputName == 'phone' && !regExprPhone.test(inputsAll[i].value)) {
+          inputsAll[i].classList.add('error');
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'phone\');">номер телефона</span></p>';
+          break;
+        }
+        if (inputName == 'email' && !regExprEmail.test(inputsAll[i].value)) {
+          inputsAll[i].classList.add('error');
+          document.getElementById('booking-form-error').innerHTML = '<p class="booking-form-payment__error">Введите <span onclick="setFocus(\'email\');">E-mail</span></p>';
+          break;
+        }
+      }
+      if (inputType == 'radio') {
+        var radio = document.querySelectorAll('input[name="' + inputName + '"');
+        var place = "";
+        var text = "";
+        for (var j=0; j<radio.length; j++){
+          if (radio[j].checked) place = radio[j].value;
+        }
+        if (place == ""){
+          if (inputName == 'placeLiving') text = '<p class="booking-form-payment__error">Выберите место проживания</p>';
+          if (inputName == 'typeCottage') text = '<p class="booking-form-payment__error">Выберите тип коттеджа</p>';
+          document.getElementById('booking-form-error').innerHTML = text;
+          break;
+        }         
+      }
+    }
+  })
+}
+
+function setFocus (id){
+  document.getElementById(id).focus();
 }
 
 

@@ -2285,6 +2285,11 @@ input[type="text"]:active:focus:-ms-input-placeholder {
 	vertical-align: top;
 }
 
+.booking-form-payment__error span {
+	border-bottom: 1px dashed #191919;
+	cursor: pointer;
+}
+
 .booking-form-payment input[type="radio"] {
 	display: none;
 }

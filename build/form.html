@@ -91,18 +91,18 @@
   </section>
 
   
-  <form action="">
+  <form class="booking-form" action="">
   <section class="booking-form-step booking-form-step--gray">
     <div class="booking-form-step__wrapper">
       <div class="booking-form-step__number">шаг 1</div>
       <div class="booking-form-step__title">Дата отдыха</div>
       <div class="booking-form-dates">
         <div class="booking-form-dates__inner">
-          <label for="date-of-entry">Дата въезда<br>
-            <input type="text" name="date-of-entry-day" placeholder="ДД" maxlength="2" ><input type="text" name="date-of-entry-month" placeholder="ММ" maxlength="2" ><input type="text" name="date-of-entry-year" placeholder="ГГГГ" maxlength="4" >  
+          <label for="dateOfEntry">Дата въезда<br>
+            <input type="text" name="dateOfEntryDay" id="dateOfEntryDay" placeholder="ДД" maxlength="2" ><input type="text" name="dateOfEntryMonth" placeholder="ММ" maxlength="2" ><input type="text" name="dateOfEntryYear" placeholder="ГГГГ" maxlength="4" >  
           </label>
-          <label for="date-of-departure">Дата выезда<br>
-          <input type="text" name="date-of-departure-date" placeholder="ДД" maxlength="2" ><input type="text" name="date-of-departure-month" placeholder="ММ" maxlength="2" ><input type="text" name="date-of-departure-year" placeholder="ГГГГ" maxlength="4" ></label>
+          <label for="dateOfDeparture">Дата выезда<br>
+          <input type="text" name="dateOfDepartureDate" id="dateOfDepartureDate" placeholder="ДД" maxlength="2" ><input type="text" name="dateOfDepartureMonth" placeholder="ММ" maxlength="2" ><input type="text" name="dateOfDepartureYear" placeholder="ГГГГ" maxlength="4" ></label>
         </div>
       </div>
     </div>
@@ -114,8 +114,8 @@
       <div class="booking-form-step__title">Место проживания</div>
       <div class="booking-form-place-living">
         <div class="booking-form-place-living__inner">
-          <label for="place-living-hotel" class="booking-form-place-living__hotel"><input type="radio" name="place-living" id="place-living-hotel"><span>Отель</span></label>
-          <label for="place-living-cottage" class="booking-form-place-living__cottage"><input type="radio" name="place-living" id="place-living-cottage"><span>Коттедж</span></label>
+          <label for="place-living-hotel" class="booking-form-place-living__hotel"><input type="radio" name="placeLiving" id="place-living-hotel" value="Отель"><span>Отель</span></label>
+          <label for="place-living-cottage" class="booking-form-place-living__cottage"><input type="radio" name="placeLiving" id="place-living-cottage" value="Коттедж"><span>Коттедж</span></label>
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@
       <div class="booking-form-step__title">Тип коттеджа</div>
       <div class="booking-form-type-cottage">
         <div class="booking-form-type-cottage__inner">
-          <label for="type-cottage-flagman"><input type="radio" name="type-cottage" id="type-cottage-flagman"><span>Флагман</span></label><label for="type-cottage-ozernyj"><input type="radio" name="type-cottage" id="type-cottage-ozernyj"><span>Озерный</span></label><label for="type-cottage-olhovka"><input type="radio" name="type-cottage" id="type-cottage-olhovka"><span>Ольховка</span></label><label for="type-cottage-portovyj"><input type="radio" name="type-cottage" id="type-cottage-portovyj"><span>Портовый</span></label>
+          <label for="type-cottage-flagman"><input type="radio" name="typeCottage" id="type-cottage-flagman"><span>Флагман</span></label><label for="type-cottage-ozernyj"><input type="radio" name="typeCottage" id="type-cottage-ozernyj"><span>Озерный</span></label><label for="type-cottage-olhovka"><input type="radio" name="typeCottage" id="type-cottage-olhovka"><span>Ольховка</span></label><label for="type-cottage-portovyj"><input type="radio" name="typeCottage" id="type-cottage-portovyj"><span>Портовый</span></label>
         </div>
       </div>
       <div class="description-cottage description-cottage--flagman js-type-cottage-flagman">
@@ -159,10 +159,10 @@
       <div class="booking-form-step__title">Персональная информация</div>
       <div class="booking-form-personal">
         <div class="booking-form-personal__inner">
-          <div><input type="text" placeholder="Имя" name="name"><span></span></div>
-          <div><input type="text" placeholder="Фамилия" name="sirname"><span></span></div>
-          <div><input type="text" placeholder="Номер телефона" name="phone"><span></span><br/>Мы свяжимся с вами в случае необходимости</div>
-          <div><input type="text" placeholder="E-mail" name="email"><span></span><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+          <div><input type="text" placeholder="Имя" name="name" id="name"><span></span></div>
+          <div><input type="text" placeholder="Фамилия" name="sirname" id="sirname"><span></span></div>
+          <div><input type="text" placeholder="Номер телефона" name="phone" id="phone"><span></span><br/>Мы свяжимся с вами в случае необходимости</div>
+          <div><input type="text" placeholder="E-mail" name="email" id="email"><span></span><br/>На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
         </div>
       </div>
     </div>
@@ -176,22 +176,22 @@
         <div class="booking-form-payment__inner">
           <div class="booking-form-payment__methods">
             <div class="booking-form-payment__arrive">
-              <label><input type="radio" name="payment"><span>По приезду</span></label>
+              <label><input type="radio" name="payment" value="По приезду"><span>По приезду</span></label>
               <div class="hidden-xs">Вы можете произвести оплату по факту заселения.</div>
             </div>
             <div class="booking-form-payment__now">
-              <label><input type="radio" name="payment" checked><span>Сейчас</span></label>
+              <label><input type="radio" name="payment" checked value="Сейчас"><span>Сейчас</span></label>
               <div class="hidden-xs">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
-              <label for="card-number">Номер карты<br><input type="text" name="card-number" id="card-number" placeholder="0000-0000-0000-0000" ></label>
-              <label for="card-cvv">Код CVV<span class="tooltip hidden-xs hidden-sm hidden-md"></span><br><input type="text" name="card-cvv" id="card-cvv" placeholder="123" ></label>
-              <label for="card-fio">Фамилия владельца карты<br><input type="text" name="card-fio" id="card-fio" placeholder="Vladimir Vladimirov" ></label>
-              <label for="card-expired">Действует до<br><input type="text" name="card-expired" id="card-expired" placeholder="01/2018" ></label>
+              <label for="card-number">Номер карты<br><input type="text" name="cardNumber" id="cardNumber" placeholder="0000-0000-0000-0000" ></label>
+              <label for="card-cvv">Код CVV<span class="tooltip hidden-xs hidden-sm hidden-md"></span><br><input type="text" name="cardCVV" id="cardCVV" placeholder="123" ></label>
+              <label for="card-fio">Фамилия владельца карты<br><input type="text" name="cardFio" id="cardFio" placeholder="Vladimir Vladimirov" ></label>
+              <label for="card-expired">Действует до<br><input type="text" name="cardExpired" id="cardExpired" placeholder="01/2018" ></label>
             </div>
           </div>
           <div class="booking-form-payment__total">
             <p class="booking-form-payment__total-title">К оплате</p>
             <p class="booking-form-payment__summa">&mdash;</p>
-            <p class="booking-form-payment__error">Пожалуйста, выберите дату въезда и выезда, чтобы увидеть сумму к оплате</p>
+            <div id="booking-form-error"></div>
           </div>
         </div>
         <div class="booking-form-payment__inner">
